@@ -1,9 +1,14 @@
 import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
 
 function App() {
-  return <p>lmn news</p>
+  return (
+    <div>
+      <p>lmn news</p>
+      <ul>
+        <li>testing deployments</li>
+      </ul>
+    </div>
+  )
 }
 
 export default App;
