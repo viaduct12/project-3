@@ -1,0 +1,15 @@
+
+#abdul {
+    height:60%;
+    width: 80%;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+
+#containerTitle {
+    background: black;
+    min-height:100vh;
+    width: 100vw;
+    position: absolute;
+}
