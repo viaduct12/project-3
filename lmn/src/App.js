@@ -12,6 +12,7 @@ import Title from "./pages/Title/Title";
 import Me from "./pages/Me/Me";
 import Discover from "./pages/Discover/Discover";
 import Populate from "./pages/Populate/Populate";
+import Forum from "./pages/Forum";
 
 
 //-------IMPORTING PAGES-------
@@ -28,7 +29,7 @@ function App() {
         <Route exact path="/Me" component={Me} />
         <Route exact path="/Discover" component={Discover} />
         <Route exact path="/Populate" component={Populate} />
-
+        <Route exact path="/Forum" component={Forum} />
 
       </div>
 
