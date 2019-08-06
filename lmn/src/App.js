@@ -22,7 +22,7 @@ function App() {
 
     <Router>
       <div>
-        <p>lmn news</p>
+
         <Route exact path="/" component={Title} />
         <Route exact path="/Login" component={Login} />
         <Route exact path="/SignUp" component={SignUp} />

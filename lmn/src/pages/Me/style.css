@@ -1,0 +1,16 @@
+
+#leftBlock {
+    background: black;
+    font-family: monospace;
+    color: lightslategray;
+    text-align: center;
+    /* display: inline-block; */
+}
+
+#rightBlock {
+    background: black;
+    font-family: monospace;
+    color: lightslategray;
+    display: inline-block;
+    text-align: left;
+}
