@@ -1,23 +1,36 @@
 
 import React, { Component } from "react";
 import API from "../../utils/API";
+import ArticleContainer from "../../components/ArticleContainer";
+// import Wrapper from "../../components/Wrapper";
 import './style.css';
 
 class Populate extends Component {
     state = {
-        title: "",
-        link: "",
-        summary: "",
+        articles: []
     };
 
     componentDidMount() {
-        this.loadArticles();
+
         this.searchListenAPI();
+        // this.loadArticles();
+        this.fetchArticles();
+
     }
 
     loadArticles = () => {
-        // API.scrapeArticles().then(res => "scrape completed").catc
+        API.scrapeArticles().then()
+        .catch(err => console.log(err))
+    };
+
+    fetchArticles = () => {
+        API.getArticles().then(res =>
+            this.setState({
+                articles: res.data
+            }))
+        .catch(err => console.log(err))
     }
+
 
     searchListenAPI = querySearch => {
         API.searchPodcast(querySearch)
@@ -29,6 +42,21 @@ class Populate extends Component {
 
 
 
+    // render() {
+    //     return (
+    //         <Wrapper>
+    //         {this.state.articles.map(articlesObj => (
+    //             <ArticleContainer
+    //                 key={articlesObj.id}
+    //                 title={articlesObj.title}
+    //                 link={articlesObj.link}
+    //                 summary={articlesObj.summary}
+    //             />
+    //         ))}
+    //         </Wrapper>
+    //     );
+    // }
+
     render() {
         return (
             <div id="containerOfpopulatedPage">
@@ -37,7 +65,7 @@ class Populate extends Component {
 
             {/* -------------------ROW 1---------------- */}
             <div id="containerPopulated">
-                <div class="column" id="containerYoutube">
+                <div className="column" id="containerYoutube">
                     <h1>youtube</h1>
                     <div id="youtube"></div>
                     <br/>
@@ -45,15 +73,24 @@ class Populate extends Component {
                     <br/>
                 </div>
                     
-                <div class="column" id="containerNews">
+                <div className="column" id="containerNews">
                     <h1>news</h1>
-                    <div id="news"></div>
+                    <div id="news">
+                        {this.state.articles.map(articlesObj => (
+                        <ArticleContainer
+                            key={articlesObj.id}
+                            title={articlesObj.title}
+                            link={articlesObj.link}
+                            summary={articlesObj.summary}
+                        />
+                        ))}
+                    </div>
                     <br/>
                     <br/>
                     <br/>
                 </div>
 
-                <div class="column" id="containerPodcast">
+                <div className="column" id="containerPodcast">
                     <h1>podcast</h1>
                     <div id="podcast"></div>
                     <br/>
