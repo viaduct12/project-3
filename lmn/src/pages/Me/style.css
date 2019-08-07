@@ -1,16 +1,109 @@
 
 #leftBlock {
-    background: black;
+    border-radius: 40px;
     font-family: monospace;
-    color: lightslategray;
-    text-align: center;
+    color: grey;
+    text-align: left;
+    float: left;
+    height: 200%;
+    width: 30%;
+    opacity: 0.9;
+    margin-top: 5%;
+    margin-left: 10%;
+    
     /* display: inline-block; */
 }
 
+#Uinfo {
+    border-radius: 25px;
+    background-color: lightslategray;
+    opacity: 0.8;
+    color: white;
+    font-family: monospace;
+    height: 70%;
+}
+
+h1, h2 {
+    color: white;
+}
+
+#titleFav {
+    margin-left: -5%;
+}
 #rightBlock {
-    background: black;
+
     font-family: monospace;
     color: lightslategray;
     display: inline-block;
-    text-align: left;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: -10%;
+    height: 100%;
+    width: 59%;
+    /* margin-top: -20%; */
+    /* z-index:999; */
+    position: fixed;
+
+
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+#row1L {
+    border-radius: 20px;
+    background-color:#6CDAE7;
+    flex: 0 0 65%;
+    height: 40%;
+    width: 40%;
+    /* margin: 2 5px; */
+    margin: 4%;
+    float: left;
+}
+
+#row2L {
+    border-radius: 20px;
+    background-color:#FC74FD;
+    flex: 0 0 65%;
+    height: 40%;
+    width: 40%;
+    /* margin: 2 5px; */
+    margin: 4%;
+    float: left;
+}
+
+#row1R {
+    border-radius: 20px;
+    background-color: #FF9933;
+    flex: 1;
+    height: 40%;
+    margin: 4%;
+    float: left;
+    width: 40%;
+}
+
+#row2R {
+    border-radius: 20px;
+    background-color: #87FF2A;
+    flex: 1;
+    height: 40%;
+    margin: 4%;
+    float: left;
+    width: 40%;
+}
+
+#explore {
+    color: orange;
 }

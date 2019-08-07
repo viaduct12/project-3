@@ -1,4 +1,7 @@
 
+body {
+    background: black;
+}
 #containerLogin {
     border-radius: 25px;
     background-color: lightcoral;
@@ -15,6 +18,17 @@
 
 }
 
+.astext {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    color: white;
+    font-family: monospace;
+}
+
+
 img {
     position: absolute;
     height: 100vh;
@@ -25,11 +39,12 @@ h1 {
     font-family: monospace;
 }
 
-#input {
+#input, input, textarea {
     /* background: lightseagreen; */
     height: 30%;
-    width: 70%;
+    width: 50%;
     border-radius: 25px;
+    color: lightseagreen;
     /* border: 2px solid lightseagreen; */
 }
 
