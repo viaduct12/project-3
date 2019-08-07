@@ -11,6 +11,7 @@ class Me extends React.Component {
             <h1>Hello ______ </h1>
             <br/>
             <br/>
+            <br/>
             <div id="userInfoBlock">
 
                 <p>username: </p>
@@ -34,11 +35,11 @@ class Me extends React.Component {
             {/* -------------------ROW 1---------------- */}
             <div id="row1">
                 <div class="column" id="row1L">
-                    <h1>stuff</h1>
+                    <h1>movements</h1>
                 </div>
                     
                 <div class="column" id="row1R">
-                    <h1>yooooo</h1>
+                    <h1>tech</h1>
                 </div>
             </div>
             {/* -------------------ROW 1---------------- */}
@@ -46,11 +47,11 @@ class Me extends React.Component {
             {/* -------------------ROW 2---------------- */}
             <div id="row2">
                 <div class="column" id="row2L">
-                    <h1>stuff</h1>
+                    <h1>politics</h1>
                 </div>
                     
                 <div class="column" id="row2R">
-                    <h1>yooooo</h1>
+                    <h1>weeAbooo</h1>
                 </div>
             </div>
             {/* -------------------ROW 2---------------- */}
