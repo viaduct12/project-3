@@ -76,7 +76,7 @@ class Discover extends React.Component {
                 </div>
                     
                 <div class="column" id="row4R">
-                    <h1>Weeboooo</h1>
+                    <h1>anime & gaming</h1>
                 </div>
             </div>
             {/* -------------------ROW 4---------------- */}

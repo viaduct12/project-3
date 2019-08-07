@@ -53,9 +53,9 @@ class Populate extends Component {
             </div>
             {/* -------------------ROW 1---------------- */}
 
-  
-         </div>
-         
+
+        </div>
+        
         );
     }
 }
