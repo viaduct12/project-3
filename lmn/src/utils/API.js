@@ -8,7 +8,12 @@ export default {
     return axios.get("https://lmn-news-api.herokuapp.com/api/politics")
   },
   searchPodcast: function(querySearch) {
-    return axios.get("https://listen-api.listennotes.com/api/v2/search?q=" + querySearch)
+    const url = "https://listen-api.listennotes.com/api/v2/search?q=" + querySearch
+    return axios.get({
+      url,
+      headers: {'X-ListenAPI-Key': process.env.ListenAPI}
+    })
+      
   }
 
 }

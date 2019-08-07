@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import API from "../../utils/API";
 import ArticleContainer from "../../components/ArticleContainer";
@@ -7,25 +6,16 @@ import './style.css';
 
 class Populate extends Component {
     state = {
-        articles: []
+        articles: [],
+        podcast: []
     };
 
     componentDidMount() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        this.loadArticles();
-        this.searchListenAPI();
-=======
-        // this.loadArticles();
-        this.fetchArticles();
->>>>>>> 2c39c6b67f00496f7cf6ea4e761988c4b3972f0c
-=======
 
         this.searchListenAPI();
         // this.loadArticles();
         this.fetchArticles();
 
->>>>>>> 500395832fb53226d0a1f18a21ea184578d8026c
     }
 
     loadArticles = () => {
@@ -41,43 +31,14 @@ class Populate extends Component {
         .catch(err => console.log(err))
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 500395832fb53226d0a1f18a21ea184578d8026c
     searchListenAPI = querySearch => {
         API.searchPodcast(querySearch)
         .then(res => this.setState({
-            results: res.data.data
+            podcasts: res.data.results
         }))
         .catch(err => console.log(err));
     }
-
-
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 500395832fb53226d0a1f18a21ea184578d8026c
-    // render() {
-    //     return (
-    //         <Wrapper>
-    //         {this.state.articles.map(articlesObj => (
-    //             <ArticleContainer
-    //                 key={articlesObj.id}
-    //                 title={articlesObj.title}
-    //                 link={articlesObj.link}
-    //                 summary={articlesObj.summary}
-    //             />
-    //         ))}
-    //         </Wrapper>
-    //     );
-    // }
-<<<<<<< HEAD
->>>>>>> 2c39c6b67f00496f7cf6ea4e761988c4b3972f0c
-=======
->>>>>>> 500395832fb53226d0a1f18a21ea184578d8026c
 
     render() {
         return (
@@ -114,7 +75,18 @@ class Populate extends Component {
 
                 <div className="column" id="containerPodcast">
                     <h1>podcast</h1>
-                    <div id="podcast"></div>
+                    <div id="podcast">
+                    {this.state.podcasts.map(podcastsObj => (
+                        <ArticleContainer
+                            key={podcastsObj.podcast_id}
+                            audio={podcastsObj.audio}
+                            image={podcastsObj.thumbnail}
+                            title={podcastsObj.title_original}
+                            link={podcastsObj.link}
+                            summary={podcastsObj.description_original}
+                        />
+                        ))}
+                    </div>
                     <br/>
                     <br/>
                     <br/>
