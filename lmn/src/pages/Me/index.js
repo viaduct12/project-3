@@ -7,7 +7,7 @@ class Me extends React.Component {
         return (
             <div id="containerMe">
 
-         <div id="leftBlock">
+        <div id="leftBlock">
             <h1>Hello ______ </h1>
             <br/>
             <br/>
@@ -25,9 +25,9 @@ class Me extends React.Component {
             <br/>
             <br/>
     
-         </div>
+        </div>
 
-         <div id="rightBlock">
+        <div id="rightBlock">
             <h1 id="titleFav">Favorites</h1>
             <br/>
             <br/>
@@ -56,8 +56,8 @@ class Me extends React.Component {
             </div>
             {/* -------------------ROW 2---------------- */}
 
-         </div>
-         
+        </div>
+        
             </div>
         );
     }
