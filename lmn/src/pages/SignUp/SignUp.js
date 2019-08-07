@@ -21,19 +21,21 @@ class SignUp extends React.Component {
  
     }
 
-
-
     render() {
         return (
         
           <div id="loginBackground">
-              <img class="responsive" id="loginBPicture" src={titleImage} alt="" />
+            {/* <div style={{backgroundImage: ${titleImage} }} ></div> */}
+            {/* <div id="imageBackround"> */}
+                <img class="responsive" id="loginBPicture" src={titleImage} alt="" /> 
+            {/* </div> */}
             <div class="front" id="containerLogin">
-                <h1>Log in!</h1>
+            {/* <img class="responsive" id="loginBPicture" src={titleImage} alt="" /> */}
+                <h1>Login !</h1>
             <form onSumbit={this.handleSubmit}>
             <input id="input" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="email"/><br/>
                     <input id="input" type="text" name="password" value={this.state.password} onChange={this.handleChange} placeholder="password"/><br/>
-                    <button type="submit" >Submit</button>
+                    <button class="astext" type="submit" >Submit</button>
             </form>
             </div>
           </div>

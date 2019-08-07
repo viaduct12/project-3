@@ -8,21 +8,53 @@ class Me extends React.Component {
             <div id="containerMe">
 
          <div id="leftBlock">
-            <h1>Profile</h1>
+            <h1>Hello ______ </h1>
             <br/>
-            <h2>Hello John</h2>
-
+            <br/>
             <div id="userInfoBlock">
-                <h1>info block</h1>
+
+                <p>username: </p>
+                <p>email: </p>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <p id="explore">Explore your favorites -> </p>
             </div>
+            <br/>
+            <br/>
+    
          </div>
 
          <div id="rightBlock">
-            <h1>Favorites</h1>
+            <h1 id="titleFav">Favorites</h1>
+            <br/>
+            <br/>
 
-            <div id="populatedBlock">
-                <h1>populated block</h1>
+            {/* -------------------ROW 1---------------- */}
+            <div id="row1">
+                <div class="column" id="row1L">
+                    <h1>stuff</h1>
+                </div>
+                    
+                <div class="column" id="row1R">
+                    <h1>yooooo</h1>
+                </div>
             </div>
+            {/* -------------------ROW 1---------------- */}
+
+            {/* -------------------ROW 2---------------- */}
+            <div id="row2">
+                <div class="column" id="row2L">
+                    <h1>stuff</h1>
+                </div>
+                    
+                <div class="column" id="row2R">
+                    <h1>yooooo</h1>
+                </div>
+            </div>
+            {/* -------------------ROW 2---------------- */}
+
          </div>
          
             </div>
