@@ -12,11 +12,22 @@ class Populate extends Component {
 
     componentDidMount() {
         this.loadArticles();
+        this.searchListenAPI();
     }
 
     loadArticles = () => {
         // API.scrapeArticles().then(res => "scrape completed").catc
     }
+
+    searchListenAPI = querySearch => {
+        API.searchPodcast(querySearch)
+        .then(res => this.setState({
+            results: res.data.data
+        }))
+        .catch(err => console.log(err));
+    }
+
+
 
     render() {
         return (
