@@ -1,5 +1,5 @@
 import React from "react";
-import '../Login/style.css';
+import './style.css';
 import titleImage from '../Title/image/titleImage.png';
 
 class Login extends React.Component {
