@@ -4,7 +4,7 @@ import './style.css';
 
 function TitleImage() {
   
-  return <div id="containerTitle"><img class="responsive" id="abdul" src={titleImage} alt="" /> </div>;
+  return <div id="containerTitle"><img className="responsive" id="abdul" src={titleImage} alt="" /> </div>;
 }
 
 export default TitleImage;
