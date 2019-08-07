@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import ArticleContainer from "../../components/ArticleContainer";
+import PodcastContainer from "../../components/PodcastContainer";
 // import Wrapper from "../../components/Wrapper";
 import './style.css';
 
 class Populate extends Component {
     state = {
         articles: [],
-        podcast: []
+        podcasts: []
     };
 
     componentDidMount() {
@@ -32,11 +33,14 @@ class Populate extends Component {
     }
 
 
-    searchListenAPI = querySearch => {
-        API.searchPodcast(querySearch)
-        .then(res => this.setState({
+    searchListenAPI = () => {
+        API.searchPodcast()
+        .then(res => 
+            this.setState({
             podcasts: res.data.results
-        }))
+        })
+        // console.log(res.data.results.length)
+        )
         .catch(err => console.log(err));
     }
 
@@ -77,7 +81,7 @@ class Populate extends Component {
                     <h1>podcast</h1>
                     <div id="podcast">
                     {this.state.podcasts.map(podcastsObj => (
-                        <ArticleContainer
+                        <PodcastContainer
                             key={podcastsObj.podcast_id}
                             audio={podcastsObj.audio}
                             image={podcastsObj.thumbnail}

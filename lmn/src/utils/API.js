@@ -7,8 +7,8 @@ export default {
   getArticles: function() {
     return axios.get("https://lmn-news-api.herokuapp.com/api/politics")
   },
-  searchPodcast: function(querySearch) {
-    const url = "https://listen-api.listennotes.com/api/v2/search?q=" + querySearch
+  searchPodcast: function() {
+    const url = "https://listen-api.listennotes.com/api/v2/search?q=politics"
     return axios.get({
       url,
       headers: {'X-ListenAPI-Key': process.env.ListenAPI}
