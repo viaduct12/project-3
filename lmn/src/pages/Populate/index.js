@@ -11,8 +11,11 @@ class Populate extends Component {
     };
 
     componentDidMount() {
+
+        this.searchListenAPI();
         // this.loadArticles();
         this.fetchArticles();
+
     }
 
     loadArticles = () => {
@@ -27,6 +30,17 @@ class Populate extends Component {
             }))
         .catch(err => console.log(err))
     }
+
+
+    searchListenAPI = querySearch => {
+        API.searchPodcast(querySearch)
+        .then(res => this.setState({
+            results: res.data.data
+        }))
+        .catch(err => console.log(err));
+    }
+
+
 
     // render() {
     //     return (
