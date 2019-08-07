@@ -1,0 +1,173 @@
+
+#leftBlock {
+    border-radius: 40px;
+    font-family: monospace;
+    color: grey;
+    text-align: left;
+    float: left;
+    height: 200%;
+    width: 30%;
+    opacity: 0.9;
+    margin-top: 5%;
+    margin-left: 10%;
+    
+    /* display: inline-block; */
+}
+
+#Uinfo {
+    border-radius: 25px;
+    background-color: lightslategray;
+    opacity: 0.8;
+    color: white;
+    font-family: monospace;
+    height: 70%;
+}
+
+h1, h2 {
+    color: white;
+}
+
+#titleFav {
+    margin-left: -25%;
+}
+#rightBlock {
+
+    font-family: monospace;
+    color: lightslategray;
+    display: inline-block;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 0%;
+    height: 100%;
+    width: 59%;
+    /* margin-top: -20%; */
+    /* z-index:999; */
+    position: fixed;
+
+
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+#row1L {
+    border-radius: 20px;
+    background-color:#6CDAE7;
+    flex: 0 0 65%;
+    height: 40%;
+    width: 30%;
+    /* margin: 2 5px; */
+    margin: 4%;
+    float: left;
+}
+
+#row2L {
+    border-radius: 20px;
+    background-color: #cc00cc ;
+    flex: 0 0 65%;
+    height: 40%;
+    width: 30%;
+    /* margin: 2 5px; */
+    margin: 4%;
+    float: left;
+}
+
+#row3L {
+    border-radius: 20px;
+    background-color: greenyellow;
+    flex: 0 0 65%;
+    height: 40%;
+    width: 30%;
+    /* margin: 2 5px; */
+    margin: 4%;
+    float: left;
+}
+
+#row4L {
+    border-radius: 20px;
+    background-color: red ;
+    flex: 0 0 65%;
+    height: 40%;
+    width: 30%;
+    /* margin: 2 5px; */
+    margin: 4%;
+    float: left;
+}
+
+#row5L {
+    border-radius: 20px;
+    background-color: violet ;
+    flex: 0 0 65%;
+    height: 40%;
+    width: 30%;
+    /* margin: 2 5px; */
+    margin: 4%;
+    float: left;
+}
+
+#row1R {
+    border-radius: 20px;
+    background-color: #FC74FD;
+    flex: 1;
+    height: 40%;
+    margin: 4%;
+    float: left;
+    width: 30%;
+}
+
+#row2R {
+    border-radius: 20px;
+    background-color: blueviolet;
+    flex: 1;
+    height: 40%;
+    margin: 4%;
+    float: left;
+    width: 30%;
+}
+
+#row3R {
+    border-radius: 20px;
+    background-color: orange;
+    flex: 1;
+    height: 40%;
+    margin: 4%;
+    float: left;
+    width: 30%;
+}
+
+#row4R {
+    border-radius: 20px;
+    background-color: #cc00cc;
+    flex: 1;
+    height: 40%;
+    margin: 4%;
+    float: left;
+    width: 30%;
+}
+
+#row5R {
+    border-radius: 20px;
+    background-color: lightskyblue;
+    flex: 1;
+    height: 40%;
+    margin: 4%;
+    float: left;
+    width: 30%;
+}
+
+
+#explore {
+    color: orange;
+}
