@@ -12,12 +12,20 @@ class Populate extends Component {
 
     componentDidMount() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         this.loadArticles();
         this.searchListenAPI();
 =======
         // this.loadArticles();
         this.fetchArticles();
 >>>>>>> 2c39c6b67f00496f7cf6ea4e761988c4b3972f0c
+=======
+
+        this.searchListenAPI();
+        // this.loadArticles();
+        this.fetchArticles();
+
+>>>>>>> 500395832fb53226d0a1f18a21ea184578d8026c
     }
 
     loadArticles = () => {
@@ -34,6 +42,10 @@ class Populate extends Component {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 500395832fb53226d0a1f18a21ea184578d8026c
     searchListenAPI = querySearch => {
         API.searchPodcast(querySearch)
         .then(res => this.setState({
@@ -43,7 +55,11 @@ class Populate extends Component {
     }
 
 
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 500395832fb53226d0a1f18a21ea184578d8026c
     // render() {
     //     return (
     //         <Wrapper>
@@ -58,7 +74,10 @@ class Populate extends Component {
     //         </Wrapper>
     //     );
     // }
+<<<<<<< HEAD
 >>>>>>> 2c39c6b67f00496f7cf6ea4e761988c4b3972f0c
+=======
+>>>>>>> 500395832fb53226d0a1f18a21ea184578d8026c
 
     render() {
         return (
