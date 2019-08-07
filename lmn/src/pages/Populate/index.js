@@ -20,8 +20,8 @@ class Populate extends Component {
 
     render() {
         return (
-            <div id="rightBlock">
-            <h1 id="titleFav">Discover</h1>
+            <div id="containerOfpopulatedPage">
+            <h1 id="titleDiscover">Discover</h1>
             
 
             {/* -------------------ROW 1---------------- */}
