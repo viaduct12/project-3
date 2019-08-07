@@ -5,6 +5,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 //------IMPORTING ROUTER-------
 
+//------IMPORTING COMPONENTS START-------
+import Navbar from "./components/Navbar";
+//------IMPORTING COMPONENTS END-------
+
 //-------IMPORTING PAGES-------
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
@@ -20,9 +24,9 @@ import Populate from "./pages/Populate";
 function App() {
   return (
 
-    <div>
-      <Router basename={ process.env.PUBLIC_URL }>
-
+    <Router basename={ process.env.PUBLIC_URL }>
+      <div>
+        <Navbar/>
         <Route exact path='/' component={Title} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={SignUp} />
@@ -31,8 +35,8 @@ function App() {
         <Route exact path="/populate" component={Populate} />
         {/* <Route exact path={process.env.PUBLIC_URL + "/forum"} component={Forum} /> */}
 
-      </Router>
-    </div>
+      </div>
+    </Router>
 
   );
 }
