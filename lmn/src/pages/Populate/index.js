@@ -1,11 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
+import API from "../../utils/API";
 
-function Populate () {
-    return (
-        <div>
-            <h1>Populated news</h1>
-        </div>
-    );
+class Populate extends Component {
+    state = {
+        title: "",
+        link: "",
+        summary: "",
+    };
+
+    componentDidMount() {
+        this.loadArticles();
+    }
+
+    loadArticles = () => {
+        // API.scrapeArticles().then(res => "scrape completed").catc
+    }
 }
 
 export default Populate;
