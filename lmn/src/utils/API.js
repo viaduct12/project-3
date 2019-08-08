@@ -14,11 +14,10 @@ export default {
     return axios.get(URL, { 
       headers: 
       {
-        'X-ListenAPI-Key': process.env.Listen_API
+        'X-ListenAPI-Key': process.env.REACT_APP_Listen_API
       }
       })
-  },
-  
+  },  
   getYoutube: function(query) {
     return axios.get("https://developers.google.com/youtube/v3/docs/search/list" + query )
   },
