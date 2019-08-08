@@ -1,4 +1,5 @@
 import axios from "axios";
+require('dotenv').config();
 
 export default {
   scrapeArticles: function() {
@@ -7,9 +8,20 @@ export default {
   getArticles: function() {
     return axios.get("https://lmn-news-api.herokuapp.com/api/politics")
   },
-  searchPodcast: function(querySearch) {
-    return axios.get("https://listen-api.listennotes.com/api/v2/search?q=" + querySearch)
-  },
+
+  searchPodcast: function() {
+    const URL = "https://listen-api.listennotes.com/api/v2/search?q=politics"
+    return axios.get(URL, { 
+      headers: 
+      {
+        'X-ListenAPI-Key': process.env.Listen_API
+      }
+      })
+  }
+
+},
+
+
   createUser: function(userInfo){
     console.log(userInfo, "inside api request");
     // return axios.post("https://lmn-news-api.herokuapp.com/api/signup", { data: {
@@ -32,3 +44,4 @@ export default {
     }})
   }
 }
+
