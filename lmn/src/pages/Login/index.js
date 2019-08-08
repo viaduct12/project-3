@@ -1,13 +1,11 @@
 import React from "react";
 import './style.css';
 import titleImage from '../Title/image/titleImage.png';
+import API from "../../utils/API";
 
 class Login extends React.Component {
 
     state = {
-        // fistName: "",
-        // Lname: "",
-        // Uname: "",
         password: "",
         email: "",
     };
@@ -20,7 +18,9 @@ class Login extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        alert('here is value ' + this.state.password + this.state.email);
+        // alert('here is value ' + this.state.password + this.state.email);
+        API.loginUser(this.state).then().catch(err => console.log(err));
+
     }
 
     render() {
@@ -29,11 +29,11 @@ class Login extends React.Component {
         <div id="loginBackground">
             {/* <div style={{backgroundImage: ${titleImage} }} ></div> */}
             {/* <div id="imageBackround"> */}
-                <img class="responsive" id="loginBPicture" src={titleImage} alt="" /> 
+                <img className="responsive" id="loginBPicture" src={titleImage} alt="" /> 
             {/* </div> */}
-            <div class="front" id="containerLogin">
+            <div className="front" id="containerLogin">
             {/* <img class="responsive" id="loginBPicture" src={titleImage} alt="" /> */}
-                <h1>Sign up!</h1>
+                <h1>Login!</h1>
                 <form onSubmit={this.handleSubmit}>
                     <input id="input" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="email"/><br/>
                     <input id="input" type="text" name="password" value={this.state.password} onChange={this.handleChange} placeholder="password"/><br/>
