@@ -1,10 +1,14 @@
 import React from "react";
 import './style.css';
 import titleImage from '../Title/image/titleImage.png';
+import API from "../../utils/API";
 
 class SignUp extends React.Component {
 
     state = {
+        firstName: "",
+        lastName: "",
+        username: "",        
         password: "",
         email: "",
     };
@@ -17,28 +21,32 @@ class SignUp extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        alert('here is value ' + this.state.value);
- 
+        // alert('here is value ' + this.state.value);
+        API.createUser(this.state).then().catch(err => console.log(err));
+
     }
 
     render() {
         return (
         
-          <div id="loginBackground">
+        <div id="loginBackground">
             {/* <div style={{backgroundImage: ${titleImage} }} ></div> */}
             {/* <div id="imageBackround"> */}
-                <img class="responsive" id="loginBPicture" src={titleImage} alt="" /> 
+                <img className="responsive" id="loginBPicture" src={titleImage} alt="" /> 
             {/* </div> */}
-            <div class="front" id="containerLogin">
+            <div className="front" id="containerLogin">
             {/* <img class="responsive" id="loginBPicture" src={titleImage} alt="" /> */}
-                <h1>Login !</h1>
-            <form onSumbit={this.handleSubmit}>
-            <input id="input" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="email"/><br/>
-                    <input id="input" type="text" name="password" value={this.state.password} onChange={this.handleChange} placeholder="password"/><br/>
-                    <button class="astext" type="submit" >Submit</button>
+                <h1>Sign Up!</h1>
+                <form onSubmit={this.handleSubmit}>
+                    <input id="input" type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} placeholder="name" /><br />
+                    <input id="input" type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} placeholder="last name" /><br />
+                    <input id="input" type="text" name="username" value={this.state.username} onChange={this.handleChange} placeholder="username" /><br />
+                    <input id="input" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="email" /><br />
+                    <input id="input" type="text" name="password" value={this.state.password} onChange={this.handleChange} placeholder="password" /><br />
+                <button className="astext" type="submit" userInfo={this.state}>Submit</button>
             </form>
             </div>
-          </div>
+        </div>
 
         );
     }
