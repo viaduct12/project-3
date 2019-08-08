@@ -17,9 +17,7 @@ export default {
         'X-ListenAPI-Key': process.env.Listen_API
       }
       })
-  }
-
-},
+  },
 
 
   createUser: function(userInfo){
