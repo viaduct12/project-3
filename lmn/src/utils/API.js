@@ -9,6 +9,9 @@ export default {
   },
   searchPodcast: function(querySearch) {
     return axios.get("https://listen-api.listennotes.com/api/v2/search?q=" + querySearch)
+  },
+  getYoutube: function(query) {
+    return axios.get("https://developers.google.com/youtube/v3/docs/search/list" + query )
   }
 
 }
