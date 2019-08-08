@@ -22,13 +22,23 @@ export default {
 
   createUser: function(userInfo){
     console.log(userInfo, "inside api request");
-    // return axios.post("https://lmn-news-api.herokuapp.com/api/signup",{
-    return axios.post("http://localhost:3000/api/signup",{ data: {
+    // return axios.post("https://lmn-news-api.herokuapp.com/api/signup", { data: {
+
+    //test link
+    return axios.post("http://localhost:3000/api/signup", { data: {
       "firstName": userInfo.firstName,
       "lastName": userInfo.lastName,
       "username": userInfo.username,
       "email": userInfo.email,
       "password": userInfo.password
+    }})
+  },
+  loginUser: function(userCredentials) {
+    console.log(userCredentials, "inside log in request");
+    // return axios.post("https://lmn-news-api.herokuapp.com/api/signup", { data: {
+    return axios.post("http://localhost:3000/api/login", { data: {
+      "email": userCredentials.email,
+      "password": userCredentials.password
     }})
   }
 }
