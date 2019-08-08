@@ -18,7 +18,7 @@ import Discover from "./pages/Discover";
 import Populate from "./pages/Populate";
 // import Forum from "./pages/Forum";
 
-
+require('dotenv').config();
 //-------IMPORTING PAGES-------
 
 function App() {
