@@ -17,9 +17,10 @@ export default {
         'X-ListenAPI-Key': process.env.REACT_APP_Listen_API
       }
       })
+  },  
+  getYoutube: function(query) {
+    return axios.get("https://developers.google.com/youtube/v3/docs/search/list" + query )
   },
-
-
   createUser: function(userInfo){
     console.log(userInfo, "inside api request");
     // return axios.post("https://lmn-news-api.herokuapp.com/api/signup", { data: {
