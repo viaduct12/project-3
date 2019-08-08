@@ -14,10 +14,11 @@ export default {
     return axios.get(URL, { 
       headers: 
       {
-        'X-ListenAPI-Key': process.env.Listen_API
+        'X-ListenAPI-Key': process.env.REACT_APP_Listen_API
       }
       })
   },
+
 
   createUser: function(userInfo){
     console.log(userInfo, "inside api request");

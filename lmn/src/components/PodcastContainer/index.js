@@ -1,27 +1,21 @@
-import React from 'react'
+import React from 'react';
+import './style.css';
 
 export default function PodcastContainer(props) {
   return (
-    <div className="card">
-      <div className="content">
-        <ul>
-        {/* <li>
-            <img src={props.image} alt={props.image}></img>
-          </li> */}
-          {/* <li>
-            <strong>Title:</strong> {props.title}
-          </li> */}
-          <li>
-            <a href={props.link}>{props.title}</a>
-          </li>
-          <li>
-            <a href={props.audio}>Audio Link</a>
-          </li>
-          <li>
-            <strong>Description:</strong> {props.description}
-          </li>
-        </ul>
-      </div>
-    </div>
+
+<div className="card" id="podcast-card">
+  <div className="content">
+  <img id="podcast-img" className="card-img" src={props.image} alt={props.image}></img>
+  <div className="card-body">
+    <h6 className="card-title">{props.title}</h6>
+    <p className="card-text">{props.description}</p>
+    <a href={props.link} className="btn btn-primary" id="podcast-btn">"{props.title}"</a>
+    <a href={props.audio} className="btn btn-primary" id="podcast-btn">Audio Link</a>
+  </div>
+</div>
+</div>
+
+
   )
 }
