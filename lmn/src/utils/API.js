@@ -11,10 +11,20 @@ export default {
 
   searchPodcast: function() {
     const URL = "https://listen-api.listennotes.com/api/v2/search?q=politics"
+<<<<<<< HEAD
     return axios.get(URL, { headers: {
         'X-ListenAPI-Key': process.env.REACT_APP_Listen_API
       }})
+=======
+    return axios.get(URL, { 
+      headers: 
+      {
+        'X-ListenAPI-Key': process.env.REACT_APP_Listen_API
+      }
+      })
+>>>>>>> aa806eeb783ffd73a97eee8e7906089b5687d931
   },
+
 
   createUser: function(userInfo){
     console.log(userInfo, "inside api request");
