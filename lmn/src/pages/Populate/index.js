@@ -4,6 +4,7 @@ import ArticleContainer from "../../components/ArticleContainer";
 import PodcastContainer from "../../components/PodcastContainer";
 // import Wrapper from "../../components/Wrapper";
 import './style.css';
+require("dotenv").config();
 
 class Populate extends Component {
     state = {
