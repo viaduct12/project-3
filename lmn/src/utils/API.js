@@ -18,13 +18,10 @@ export default {
       }
       })
   },
-<<<<<<< HEAD
+  
   getYoutube: function(query) {
     return axios.get("https://developers.google.com/youtube/v3/docs/search/list" + query )
   },
-=======
-
->>>>>>> 123d08eb92b5501f21feb993d4b0b948bc0ed3ad
   createUser: function(userInfo){
     console.log(userInfo, "inside api request");
     // return axios.post("https://lmn-news-api.herokuapp.com/api/signup", { data: {
