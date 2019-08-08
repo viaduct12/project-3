@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import ArticleContainer from "../../components/ArticleContainer";
-// import Wrapper from "../../components/Wrapper";
 import './style.css';
 
 class Populate extends Component {
@@ -11,8 +10,11 @@ class Populate extends Component {
     };
 
     componentDidMount() {
+
+        this.searchListenAPI();
         // this.loadArticles();
         this.fetchArticles();
+
     }
 
     loadArticles = () => {
@@ -28,20 +30,14 @@ class Populate extends Component {
         .catch(err => console.log(err))
     }
 
-    // render() {
-    //     return (
-    //         <Wrapper>
-    //         {this.state.articles.map(articlesObj => (
-    //             <ArticleContainer
-    //                 key={articlesObj.id}
-    //                 title={articlesObj.title}
-    //                 link={articlesObj.link}
-    //                 summary={articlesObj.summary}
-    //             />
-    //         ))}
-    //         </Wrapper>
-    //     );
-    // }
+
+    searchListenAPI = querySearch => {
+        API.searchPodcast(querySearch)
+        .then(res => this.setState({
+            results: res.data.data
+        }))
+        .catch(err => console.log(err));
+    }
 
     render() {
         return (
