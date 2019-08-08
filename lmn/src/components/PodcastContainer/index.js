@@ -5,17 +5,17 @@ export default function PodcastContainer(props) {
     <div className="card">
       <div className="content">
         <ul>
-        <li>
-            {props.thumbnail}
-          </li>
-          <li>
-            {props.audio}
-          </li>
-          <li>
+        {/* <li>
+            <img src={props.image} alt={props.image}></img>
+          </li> */}
+          {/* <li>
             <strong>Title:</strong> {props.title}
+          </li> */}
+          <li>
+            <a href={props.link}>{props.title}</a>
           </li>
           <li>
-            <strong>Link:</strong> {props.link}
+            <a href={props.audio}>Audio Link</a>
           </li>
           <li>
             <strong>Description:</strong> {props.description}

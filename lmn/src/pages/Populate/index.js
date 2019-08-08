@@ -83,10 +83,10 @@ class Populate extends Component {
                         <PodcastContainer
                             key={podcastsObj.podcast_id}
                             audio={podcastsObj.audio}
-                            image={podcastsObj.thumbnail}
+                            image={podcastsObj.image}
                             title={podcastsObj.title_original}
-                            link={podcastsObj.link}
-                            summary={podcastsObj.description_original}
+                            link={podcastsObj.listennotes_url}
+                            description={podcastsObj.description_original}
                         />
                         ))}
                     </div>
