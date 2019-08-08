@@ -29,10 +29,11 @@ body {
     border-radius: 20px;
     background-color: red;
     flex: 1;
-    height: 40%;
+    height: 70vh;
     margin: 4%;
-    float: left;
-    width: 30%;
+    /* float: left; */
+    width: 50%;
+    text-align: center;
 }
 
 #containerNews {
