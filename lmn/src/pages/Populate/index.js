@@ -8,6 +8,7 @@ import Searchbar from '../../components/Youtube/SearchBar';
 import youtube from "../../components/Youtube/youtube";
 import VideoList from '../../components/Youtube/VideoList';
 // import VideoDetail from '../../components/Youtube/VideoDetail';
+require("dotenv").config();
 
 class Populate extends Component {
     state = {
