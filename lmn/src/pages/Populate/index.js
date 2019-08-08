@@ -35,13 +35,12 @@ class Populate extends Component {
 
     searchListenAPI = () => {
         API.searchPodcast()
-        .then(res => 
-            this.setState({
+        .then(res => this.setState({
             podcasts: res.data.results
         })
-        // console.log(res.data.results.length)
         )
         .catch(err => console.log(err));
+        
     }
 
     render() {
