@@ -8,7 +8,11 @@ import Searchbar from '../../components/Youtube/Searchbar';
 import youtube from "../../components/Youtube/youtube";
 import VideoList from '../../components/Youtube/VideoList';
 import VideoDetail from '../../components/Youtube/VideoDetail';
+import axios from 'axios';
 require("dotenv").config();
+
+
+const KEY = 'AIzaSyAFUNYmE1gfydRFrlb3Q05gXlPSgQmiY6I';
 
 class Populate extends Component {
     state = {
@@ -19,9 +23,13 @@ class Populate extends Component {
     };
 
     handleSubmit = async (termFromSearchBar) => {
-        const response = await youtube.get('/search', {
-            params: {
-                q: termFromSearchBar
+        console.log('inside handleFormSubmit')
+        const response = await axios.get('https://www.googleapis.com/youtube/v3/search/',
+            {params: {
+                part: 'snippet',
+                maxResults: 5,
+                key: KEY,
+                q:termFromSearchBar
             }
         })
         this.setState({
@@ -80,8 +88,8 @@ class Populate extends Component {
                     <div className="ui row">
                         <div className="eleven wide column">
                             <VideoDetail video={this.state.selectedVideo}/>
-                            <iframe width="420" height="345" src="https://youtu.be/AjqaNQ018zU">
-</iframe>
+                            {/* <iframe id="video" width="420" height="345" src="https://youtu.be/AjqaNQ018zU">
+</iframe> */}
                         </div>
                         <div className="five wide column">
                             <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>

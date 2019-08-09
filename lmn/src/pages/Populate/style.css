@@ -27,14 +27,16 @@ body {
 
 #containerYoutube {
     border-radius: 20px;
-    background-color: red;
+    background-color: white;
     flex: 1;
-    height: 70vh;
+    height: 70%;
     margin: 4%;
     /* float: left; */
-    width: 100vh;
+    width: 60vh;
     text-align: center;
 }
+
+
 
 #containerNews {
     border-radius: 20px;
