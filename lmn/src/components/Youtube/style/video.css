@@ -1,0 +1,35 @@
+.video-item {
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer;
+    width: 13.3vh;
+    height: 14%;
+    text-align: left;
+    margin-left: -7vh;
+}
+
+.video-item.item img {
+    max-width: 6.6vh;
+    max-height: 6vh ;
+    margin-left: -50vh;
+    border-radius: 15px;
+}
+
+#embeded {
+    width: 29vh;
+    height: 26.6vh;
+    margin-left: ;
+}
+
+#videoContainer {
+    width: 29vh;
+    height: 23.3vh;
+    margin-left: 6vh;
+    margin-top: 5vh;
+}
+
+#description {
+    width: 30vh;
+    margin-left: 6vh;
+    font-weight: smaller;
+}
