@@ -4,12 +4,12 @@ require('dotenv').config();
 export default {
   scrapeArticles: function(query) {
     console.log("scrape test");
-    // return axios.get("https://lmn-news-api.herokuapp.com/scrape/" + query);
-    return axios.get("http://localhost:3000/scrape/" + query);
+    return axios.get("https://lmn-news-api.herokuapp.com/scrape/" + query);
+    // return axios.get("http://localhost:3000/scrape/" + query);
   },
   getArticles: function(query) {
-    // return axios.get("https://lmn-news-api.herokuapp.com/api/" + query)
-    return axios.get("http://localhost:3000/api/" + query);
+    return axios.get("https://lmn-news-api.herokuapp.com/api/" + query)
+    // return axios.get("http://localhost:3000/api/" + query);
   },
 
   searchPodcast: function(query) {
@@ -40,8 +40,8 @@ export default {
   },
   loginUser: function(userCredentials) {
     console.log(userCredentials, "inside log in request");
-    // return axios.post("https://lmn-news-api.herokuapp.com/api/login", { data: {
-    return axios.post("http://localhost:3000/api/login", { data: {
+    return axios.post("https://lmn-news-api.herokuapp.com/api/login", { data: {
+    // return axios.post("http://localhost:3000/api/login", { data: {
       "email": userCredentials.email,
       "password": userCredentials.password
     }})
