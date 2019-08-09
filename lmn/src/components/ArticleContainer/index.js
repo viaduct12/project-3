@@ -10,7 +10,7 @@ export default function ArticleContainer(props) {
         </div>
         <div className="card-body">
       <p className="card-text">Summary: {props.summary}</p>
-        <a href={props.link} className="btn btn-primary" id="podcast-btn">"{props.title}"</a>
+        <a href={props.link} id="article-btn" className="btn btn-primary">"{props.title}"</a>
           </div>
       
       </div>
