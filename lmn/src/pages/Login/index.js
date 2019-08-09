@@ -2,6 +2,7 @@ import React from "react";
 import './style.css';
 import titleImage from '../Title/image/titleImage.png';
 import API from "../../utils/API";
+import Auth from "../../utils/Auth";
 
 class Login extends React.Component {
 
@@ -19,7 +20,10 @@ class Login extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         // alert('here is value ' + this.state.password + this.state.email);
-        API.loginUser(this.state).then().catch(err => console.log(err));
+        API.loginUser(this.state).then(res => {
+            Auth.setToken(res.data.token);
+            this.props.history.push('/discover');
+        }).catch(err => console.log(err));
 
     }
 
@@ -36,7 +40,7 @@ class Login extends React.Component {
                 <h1>Login!</h1>
                 <form onSubmit={this.handleSubmit}>
                     <input id="input" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="email"/><br/>
-                    <input id="input" type="text" name="password" value={this.state.password} onChange={this.handleChange} placeholder="password"/><br/>
+                    <input id="input" type="password" name="password" value={this.state.password} onChange={this.handleChange} placeholder="password"/><br/>
                     <button className="astext" type="submit" >Submit</button>
                 </form>
             </div>
