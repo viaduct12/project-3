@@ -22,15 +22,6 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link
-              to="/login"
-              className={
-                window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
-            >
-              Login / Sign Up
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
               to="/me"
               className={window.location.pathname === "/me" ? "nav-link active" : "nav-link"}
             >
@@ -47,10 +38,19 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link
-              to="/populate"
-              className={window.location.pathname === "/populate" ? "nav-link active" : "nav-link"}
+              to="/login"
+              className={
+                window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
             >
-              Populate
+              Login
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/signup"
+              className={window.location.pathname === "/signup" ? "nav-link active" : "nav-link"}
+            >
+              Sign Up
             </Link>
           </li>
         </ul>

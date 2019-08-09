@@ -11,7 +11,9 @@ import VideoList from '../../components/Youtube/VideoList';
 require("dotenv").config();
 
 class Populate extends Component {
+
     state = {
+        category: this.props.match.params.category,
         articles: [],
         podcasts: [],
         videos: [],
@@ -34,20 +36,20 @@ class Populate extends Component {
     }
 
     componentDidMount() {
-
         this.searchListenAPI();
-        // this.loadArticles();
+        this.loadArticles();
         this.fetchArticles();
 
     }
 
+
     loadArticles = () => {
-        API.scrapeArticles().then()
+        API.scrapeArticles(this.state.category).then()
         .catch(err => console.log(err))
     };
 
     fetchArticles = () => {
-        API.getArticles().then(res =>
+        API.getArticles(this.state.category).then(res =>
             this.setState({
                 articles: res.data
             }))
@@ -56,7 +58,7 @@ class Populate extends Component {
 
 
     searchListenAPI = () => {
-        API.searchPodcast()
+        API.searchPodcast(this.state.category)
         .then(res => this.setState({
             podcasts: res.data.results
         })
