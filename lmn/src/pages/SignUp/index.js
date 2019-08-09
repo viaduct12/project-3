@@ -2,6 +2,7 @@ import React from "react";
 import './style.css';
 import titleImage from '../Title/image/titleImage.png';
 import API from "../../utils/API";
+import Auth from "../../utils/Auth";
 
 class SignUp extends React.Component {
 
@@ -22,7 +23,10 @@ class SignUp extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         // alert('here is value ' + this.state.value);
-        API.createUser(this.state).then().catch(err => console.log(err));
+        API.createUser(this.state).then(res => {
+            Auth.setToken(res.data.token);
+            this.props.history.push('/discover');
+        }).catch(err => console.log(err));
 
     }
 
@@ -42,7 +46,7 @@ class SignUp extends React.Component {
                     <input id="input" type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} placeholder="last name" /><br />
                     <input id="input" type="text" name="username" value={this.state.username} onChange={this.handleChange} placeholder="username" /><br />
                     <input id="input" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="email" /><br />
-                    <input id="input" type="text" name="password" value={this.state.password} onChange={this.handleChange} placeholder="password" /><br />
+                    <input id="input" type="password" name="password" value={this.state.password} onChange={this.handleChange} placeholder="password" /><br />
                 <button className="astext" type="submit" userInfo={this.state}>Submit</button>
             </form>
             </div>
