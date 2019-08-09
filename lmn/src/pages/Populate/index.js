@@ -67,15 +67,15 @@ class Populate extends Component {
 
     render() {
         return (
-            <div id="containerOfpopulatedPage">
+            <div id="containerOfpopulatedPage" className="container">
             <h1 id="titleDiscover">Discover</h1>
             
 
             {/* -------------------ROW 1---------------- */}
-            <div id="containerPopulated">
+            {/* <div id="containerPopulated"> */}
                 <div className="column" id="containerYoutube">
                     <h1>youtube</h1>
-                    <Searchbar handleFormSubmit={this.handleSubmit}/>
+                    <Searchbar handleFormSubmit= {this.handleSubmit} />
                     <div className="ui grid">
                         <div className="ui row">
                             <div className="eleven wide column">
@@ -129,7 +129,7 @@ class Populate extends Component {
                     <br/>
                 </div>
 
-            </div>
+            {/* </div> */}
             {/* -------------------ROW 1---------------- */}
 
 
