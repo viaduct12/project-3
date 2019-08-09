@@ -4,10 +4,10 @@ import ArticleContainer from "../../components/ArticleContainer";
 import PodcastContainer from "../../components/PodcastContainer";
 // import Wrapper from "../../components/Wrapper";
 import './style.css';
-import Searchbar from '../../components/Youtube/SearchBar';
+import Searchbar from '../../components/Youtube/Searchbar';
 import youtube from "../../components/Youtube/youtube";
 import VideoList from '../../components/Youtube/VideoList';
-// import VideoDetail from '../../components/Youtube/VideoDetail';
+import VideoDetail from '../../components/Youtube/VideoDetail';
 require("dotenv").config();
 
 class Populate extends Component {
@@ -76,17 +76,20 @@ class Populate extends Component {
                 <div className="column" id="containerYoutube">
                     <h1>youtube</h1>
                     <Searchbar handleFormSubmit={this.handleSubmit}/>
-                    <div className="ui grid">
-                        <div className="ui row">
-                            <div className="eleven wide column">
-                                {/* <VideoDetail video={this.state.selectedVideo}/> */}
-                            </div>
-                            <div className="five wide column">
-                                <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
-                            </div>
+                <div className='ui grid'>
+                    <div className="ui row">
+                        <div className="eleven wide column">
+                            <VideoDetail video={this.state.selectedVideo}/>
+                            <iframe width="420" height="345" src="https://youtu.be/AjqaNQ018zU">
+</iframe>
                         </div>
-
+                        <div className="five wide column">
+                            <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
+                        </div>
                     </div>
+                </div>
+
+                    
                     <br/>
                     <br/>
                     <br/>
