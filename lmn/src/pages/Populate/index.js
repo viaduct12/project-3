@@ -15,7 +15,9 @@ require("dotenv").config();
 const KEY = 'AIzaSyAFUNYmE1gfydRFrlb3Q05gXlPSgQmiY6I';
 
 class Populate extends Component {
+
     state = {
+        category: this.props.match.params.category,
         articles: [],
         podcasts: [],
         videos: [],
@@ -42,20 +44,20 @@ class Populate extends Component {
     }
 
     componentDidMount() {
-
         this.searchListenAPI();
-        // this.loadArticles();
+        this.loadArticles();
         this.fetchArticles();
 
     }
 
+
     loadArticles = () => {
-        API.scrapeArticles().then()
+        API.scrapeArticles(this.state.category).then()
         .catch(err => console.log(err))
     };
 
     fetchArticles = () => {
-        API.getArticles().then(res =>
+        API.getArticles(this.state.category).then(res =>
             this.setState({
                 articles: res.data
             }))
@@ -64,7 +66,7 @@ class Populate extends Component {
 
 
     searchListenAPI = () => {
-        API.searchPodcast()
+        API.searchPodcast(this.state.category)
         .then(res => this.setState({
             podcasts: res.data.results
         })
@@ -75,12 +77,12 @@ class Populate extends Component {
 
     render() {
         return (
-            <div id="containerOfpopulatedPage">
+            <div id="containerOfpopulatedPage" className="container">
             <h1 id="titleDiscover">Discover</h1>
             
 
             {/* -------------------ROW 1---------------- */}
-            <div id="containerPopulated">
+            {/* <div id="containerPopulated"> */}
                 <div className="column" id="containerYoutube">
                     <h1>youtube</h1>
                     <Searchbar handleFormSubmit={this.handleSubmit}/>
@@ -140,7 +142,7 @@ class Populate extends Component {
                     <br/>
                 </div>
 
-            </div>
+            {/* </div> */}
             {/* -------------------ROW 1---------------- */}
 
 

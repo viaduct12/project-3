@@ -32,7 +32,7 @@ function App() {
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/me" component={Me} />
         <Route exact path="/discover" component={Discover} />
-        <Route exact path="/populate" component={Populate} />
+        <Route path="/populate/:category" component={Populate} />
         {/* <Route exact path={process.env.PUBLIC_URL + "/forum"} component={Forum} /> */}
 
       </div>
