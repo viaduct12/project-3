@@ -51,7 +51,7 @@ class Me extends React.Component {
                 </div>
                     
                 <div class="column" id="row2R">
-                    <h1>weeAbooo</h1>
+                    <h1>anime & gaming</h1>
                 </div>
             </div>
             {/* -------------------ROW 2---------------- */}

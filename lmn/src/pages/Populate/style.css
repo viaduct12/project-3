@@ -26,6 +26,7 @@ body {
 }
 
 #containerYoutube {
+    /* position: relative; */
     border-radius: 20px;
     background-color: red;
     flex: 1;
@@ -37,6 +38,7 @@ body {
 }
 
 #containerNews {
+    /* position: relative; */
     border-radius: 20px;
     background-color:#6CDAE7;
     flex: 0 0 65%;
@@ -46,9 +48,11 @@ body {
     margin-left: 80%;
     margin-top: -20%;
     float: left;
+    text-align: center;
 }
 
 #containerPodcast {
+    /* position: relative; */
     border-radius: 20px;
     background-color: #FC74FD;
     flex: 1;
@@ -57,4 +61,5 @@ body {
     margin-top: 20%;
     float: left;
     width: 30%;
+    text-align: center;
 }
