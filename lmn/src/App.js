@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 //------IMPORTING COMPONENTS START-------
 import Navbar from "./components/Navbar";
+import PrivateRoute from "./components/PrivateRoute";
 //------IMPORTING COMPONENTS END-------
 
 //-------IMPORTING PAGES-------
@@ -30,7 +31,7 @@ function App() {
         <Route exact path='/' component={Title} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/me" component={Me} />
+        <PrivateRoute exact path="/me" component={Me} />
         <Route exact path="/discover" component={Discover} />
         <Route path="/populate/:category" component={Populate} />
         {/* <Route exact path={process.env.PUBLIC_URL + "/forum"} component={Forum} /> */}
