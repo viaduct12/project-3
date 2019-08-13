@@ -47,6 +47,11 @@ export default {
     console.log(userCredentials, "inside log in request");
     // return axios.post("https://lmn-news-api.herokuapp.com/api/login", { data: {
     return axios.post("http://localhost:3000/api/auth/login", userCredentials);
-  }
+  },
+
+forumCategory: function(query) {
+  return axios.get('http://localhost:3000/api/forum' + query)
+}  
+
 }
 

@@ -1,4 +1,6 @@
 import React from 'react';
+// import M from "materialize-css";
+// import "materialize-css/dist/css/materialize.min.css";
 import './style.css';
 import Categories from '../../components/Categories';
 import RecentPosts from '../../components/RecentPosts';
