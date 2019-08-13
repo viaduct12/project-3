@@ -24,14 +24,14 @@ class Populate extends Component {
         selectedVideo: null
     };
 
-    handleSubmit = async (termFromSearchBar) => {
+    handleSubmit = async (termFromSearchbar) => {
         console.log('inside handleFormSubmit')
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search/',
             {params: {
                 part: 'snippet',
                 maxResults: 5,
                 key: KEY,
-                q:termFromSearchBar
+                q:termFromSearchbar
             }
         })
         this.setState({
