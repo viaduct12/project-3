@@ -1,4 +1,4 @@
-const TOKEN_KEY = 'CharizardisBestestestestestestestest';
+const TOKEN_KEY = 'Charizard';
 
 export default {
 
