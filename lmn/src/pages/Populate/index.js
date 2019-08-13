@@ -4,7 +4,7 @@ import ArticleContainer from "../../components/ArticleContainer";
 import PodcastContainer from "../../components/PodcastContainer";
 // import Wrapper from "../../components/Wrapper";
 import './style.css';
-import Searchbar from '../../components/Youtube/SearchBar';
+import Searchbar from '../../components/Youtube/Searchbar';
 // import youtube from "../../components/Youtube/youtube";
 import VideoList from '../../components/Youtube/VideoList';
 import VideoDetail from '../../components/Youtube/VideoDetail';
@@ -24,14 +24,14 @@ class Populate extends Component {
         selectedVideo: null
     };
 
-    handleSubmit = async (termFromSearchBar) => {
+    handleSubmit = async (termFromSearchbar) => {
         console.log('inside handleFormSubmit')
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search/',
             {params: {
                 part: 'snippet',
                 maxResults: 5,
                 key: KEY,
-                q:termFromSearchBar
+                q:termFromSearchbar
             }
         })
         this.setState({

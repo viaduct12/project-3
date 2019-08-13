@@ -17,7 +17,7 @@ import Title from "./pages/Title";
 import Me from "./pages/Me";
 import Discover from "./pages/Discover";
 import Populate from "./pages/Populate";
-// import Forum from "./pages/Forum";
+import Forum from "./pages/ForumFeed";
 
 require('dotenv').config();
 //-------IMPORTING PAGES-------
@@ -34,6 +34,7 @@ function App() {
         <PrivateRoute exact path="/me" component={Me} />
         <Route exact path="/discover" component={Discover} />
         <Route path="/populate/:category" component={Populate} />
+        <Route exact path="/forum" component={Forum} />
         {/* <Route exact path={process.env.PUBLIC_URL + "/forum"} component={Forum} /> */}
 
       </div>
