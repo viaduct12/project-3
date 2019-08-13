@@ -4,8 +4,9 @@ import "materialize-css/dist/css/materialize.min.css";
 import './style.css';
 import Input from '../Input';  
 import TextArea from '../TextArea'; 
-import Button from '../Button';
-
+import PostButton from '../PostButton';
+import DiscardButton from '../DiscardButton';
+import Options from '../Options';
 
 class Modal extends Component {
   constructor(props){
@@ -145,7 +146,8 @@ handleInput(e) {
                   value={this.state.newPost.name} 
                   placeholder = {'Enter your topic'}
                   handleChange = {this.handleInput}/> 
-                
+          {/* Category Options */}
+            <Options/>
           {/* Discussion*/}
           <TextArea
             title={'What would you like to discuss?'}
@@ -156,15 +158,16 @@ handleInput(e) {
             placeholder={'type away!'} />
 
           <div className="modal-footer">
-            <button action={this.handleSubmitForm} type={'primary'} title={'submit'} className="modal-close waves-effect waves-green btn-flat">
+            <PostButton/>
+            {/* <button action={this.handleSubmitForm} type={'primary'} title={'submit'} className="modal-close waves-effect waves-green btn-flat">
               Post
-            </button>
-            <button action={this.handleClearForm} type={'secondary'} title={'clear'}  className="modal-close waves-effect waves-red btn-flat">
-              Discard
-            </button>
+            </button> */}
+              <DiscardButton/>
+            {/* <button action={this.handleClearForm} type={'secondary'} title={'clear'}  className="modal-close waves-effect waves-red btn-flat">
+              Discard</button> */}
+            </div>
           </div>
         </div>
-      </div>
       </div>
 
     );
