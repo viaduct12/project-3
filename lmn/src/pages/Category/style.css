@@ -1,0 +1,42 @@
+h1 {
+  color: whitesmoke;
+}
+
+body {
+  background-color: black;
+}
+
+
+#new-topic-btn {
+  margin: 20px;
+  background-color: lightseagreen;
+  align-content: 
+}
+
+h2 {
+  color: whitesmoke;
+}
+#post-container {
+  margin: 10px;
+  padding: 10px;
+}
+
+#category-container, #tag-container {
+  padding: 10px;
+  margin: 50px;
+  margin-left: 60px;
+  /* height: auto;
+  width: 80%; */
+}
+
+
+.section {
+  padding: 10px;
+  color: whitesmoke;
+}
+
+
+
+.z-depth-2 {
+  /* background-color:rgb(3, 33, 43); */
+}

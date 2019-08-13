@@ -1,0 +1,9 @@
+body {
+  background-color: black;
+}
+
+#new-topic-btn {
+  margin: 20px;
+  background-color: lightseagreen;
+}
+
