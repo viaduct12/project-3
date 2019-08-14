@@ -16,7 +16,9 @@ export default function PostContainer(props) {
         <h6><i class="material-icons">person_outline</i> {props.username}</h6>
         <p>{props.description}</p>
         <p><i class="material-icons">access_time</i> {props.createdAt}</p>
+        <div className="divider"></div>
       </div>
+      
       // </div>
 
   )
