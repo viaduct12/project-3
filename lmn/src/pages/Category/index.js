@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import './style.css';
 import Modal from '../../components/Modal';
 import Categories from '../../components/Categories';
-<<<<<<< HEAD
+
 // import Discussions from '../../components/Discussions';
-=======
+
 import PostContainer from "../../components/PostContainer";
->>>>>>> d56ecd888666b819bd61532951c4a098938064d1
+
 import API from "../../utils/API";
 
 
