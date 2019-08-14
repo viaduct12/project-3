@@ -48,10 +48,22 @@ export default {
     // return axios.post("https://lmn-news-api.herokuapp.com/api/login", { data: {
     return axios.post("http://localhost:3000/api/auth/login", userCredentials);
   },
-
+// probably unnecessary
 forumCategory: function(query) {
   return axios.get('http://localhost:3000/api/forum' + query)
-}  
+},  
+
+createPost: function(postObj){
+  console.log(postObj, "tee hee");
+  return axios.post('http://localhost:3000/api/post/create', postObj)
+},
+
+getPost: function(postCategory){
+  console.log(postCategory, "get function");
+  return axios.get("http://localhost:3000/api/post/get/" + postCategory);
+
+}
+
 
 }
 
