@@ -7,7 +7,8 @@ function Navbar() {
   return (
     <nav className="navbar">
       <Link className="brand-logo right" to="/">
-      <img id="lmn-logo" src="/image/LMN_solid.png" alt="LMN logo"/>
+      Learn More News
+      {/* <img src="/image/LMN_solid.png"/> */}
       </Link>
       <div>
         <ul className="navbar-nav">
