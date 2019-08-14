@@ -15,6 +15,10 @@
 }
  */
 
+.containerBottomTitle {
+    z-index: -1;
+    background-color: seagreen;
+}
 .titleImage {
     text-align: center;
     display: grid;
@@ -22,4 +26,6 @@
     min-height: 100vh;
     background-color: black;
     padding: 0 10px;
+    font-family: monospace;
+    
 }
