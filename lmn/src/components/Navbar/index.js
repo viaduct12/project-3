@@ -9,7 +9,7 @@ function Navbar() {
     <nav className="navbar">
       <Link className="brand-logo right" to="/">
       Learn More News
-      {/* <img src="/image/LMN_solid.png"/> */}
+      <img src="./image/LMN_solid.png" alt="logo"/>
       </Link>
       <div>
         <ul className="navbar-nav">

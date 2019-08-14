@@ -58,6 +58,7 @@ render () {
             username={postCategory.username}
             description={postCategory.description}
             createdAt={postCategory.createdAt}
+            category={postCategory.category}
           />
         ))}
         </div>
