@@ -54,11 +54,12 @@ export default {
   },  
 
   createPost: function(postObj){
-    console.log(postObj, "tee hee");
+    // return axios.post("https://lmn-news-api.herokuapp.com/api/post/create", postObj);
     return axios.post('http://localhost:3000/api/post/create', postObj)
   },
 
   getPost: function(postCategory){
+    // return axios.post("https://lmn-news-api.herokuapp.com/api/post/get/" + postCategory);
     return axios.get("http://localhost:3000/api/post/get/" + postCategory);
 
   }
