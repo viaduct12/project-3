@@ -10,7 +10,7 @@ function Navbar() {
       <div className="nav-wrapper">
       <Link className="brand-logo right" to="/">
       Learn More News
-      {/* <img class="responsive-img" src="./image/LMN_solid.png" alt="logo"/> */}
+      {/* <img className="responsive-img" src="./image/LMN_solid.png" alt="logo"/> */}
 
       </Link>
       <div>
