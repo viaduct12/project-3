@@ -82,26 +82,24 @@ class Populate extends Component {
     render() {
         return (
             <div id="containerOfpopulatedPage" className="container">
-            <h1 id="titleDiscover">Discover</h1>
+                {/* <h1 id="titleDiscover">Discover</h1> */}
             
 
-            {/* -------------------ROW 1---------------- */}
-            {/* <div id="containerPopulated"> */}
-                <div className="column" id="containerYoutube">
+                {/* -------------------YOUTUBE---------------- */}
+                {/* <div id="containerPopulated"> */}
+                <div id="containerYoutube">
                     <h1>youtube</h1>
                     <Searchbar handleFormSubmit={this.handleSubmit}/>
-                <div className='ui grid'>
-                    <div className="ui row">
-                        <div className="eleven wide column">
-                            <VideoDetail video={this.state.selectedVideo}/>
-                            {/* <iframe id="video" width="420" height="345" src="https://youtu.be/AjqaNQ018zU">
-</iframe> */}
-                        </div>
-                        <div className="five wide column">
-                            <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
+                    <div className='ui grid'>
+                        <div className="ui row">
+                            <div className="eleven wide column">
+                                <VideoDetail video={this.state.selectedVideo}/>
+                            </div>
+                            <div className="five wide column">
+                                <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                     
                     <br/>
@@ -109,8 +107,10 @@ class Populate extends Component {
                     <br/>
                     <br/>
                 </div>
-                    
-                <div className="column" id="containerNews">
+                {/* -------------------YOUTUBE---------------- */}
+
+                {/* -------------------NEWS---------------- */}
+                <div id="containerNews">
                     <h1>news</h1>
                     <div id="news">
                         {this.state.articles.map(articlesObj => (
@@ -126,8 +126,10 @@ class Populate extends Component {
                     <br/>
                     <br/>
                 </div>
+                {/* -------------------NEWS---------------- */}
 
-                <div className="column" id="containerPodcast">
+                {/* -------------------PODCAST---------------- */}
+                <div id="containerPodcast">
                     <h1>podcast</h1>
                     <div id="podcast">
                     {this.state.podcasts.map(podcastsObj => (
@@ -145,12 +147,10 @@ class Populate extends Component {
                     <br/>
                     <br/>
                 </div>
+                {/* -------------------PODCAST---------------- */}
 
-            {/* </div> */}
-            {/* -------------------ROW 1---------------- */}
-
-
-        </div>
+                {/* -------------------ROW 1---------------- */}
+            </div>
         
         );
     }

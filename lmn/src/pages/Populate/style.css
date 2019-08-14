@@ -7,22 +7,25 @@
     width: 70%;
 } */
 
-#containerOfPopulatedPage {
-    width: 100%;
- 
+h1 {
+    text-align: center;
+    font-size: 30%;
 }
 
-#containerPopulated {
-    width:100%;
+#containerOfpopulatedPage {
     display: grid;
-    grid-template-columns: 100px 100px 100px;  
+    grid-template-columns: 1fr 1fr 1fr;  
     grid-template-rows: 50px 50px; 
 }
 
 
 #titleDiscover {
     
-    margin-right: -20%;
+    text-align: center;
+}
+
+#news {
+    border-radius: 20px;
 }
 
 body {
@@ -30,42 +33,49 @@ body {
 }
 
 #containerYoutube {
-    /* position: relative; */
+
+    width: 100%;
     border-radius: 20px;
     background-color: white;
-    flex: 1;
+    margin-top: 40%;
+    margin-left: -16%;
+    /* flex: 1;
     height: 70%;
-    margin: 4%;
-    /* float: left; */
-    width: 60vh;
-    text-align: center;
+    
+    
+    width: 60vh; */
+    text-align: left;
 }
 
 
 
 #containerNews {
-    /* position: relative; */
+
     border-radius: 20px;
     background-color:#6CDAE7;
-    flex: 0 0 65%;
-    height: 40%;
-    width: 33%;
-    /* margin: 2 5px; */
+    margin-top: 40%;
+    width: 100%;
+    /* flex: 0 0 65%;
+
+
     margin-left: 80%;
-    margin-top: -20%;
+    
     float: left;
-    text-align: center;
+    text-align: left; */
 }
 
 #containerPodcast {
-    /* position: relative; */
+    
     border-radius: 20px;
     background-color: #FC74FD;
-    flex: 1;
+    margin-top: 40%;
+    width: 100%;
+    
+    /* flex: 1;
     height: 40%;
     margin-left: 40%;
     margin-top: 20%;
     float: left;
-    width: 30%;
-    text-align: center;
+    width: 30%; */
+    text-align: left;
 }
