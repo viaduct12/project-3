@@ -38,7 +38,7 @@ function App() {
         <Route path="/populate/:category" component={Populate} />
         <Route exact path="/forum" component={Forum} />
         <Route path="/forum/:category" component={Category} />
-        <Route path="/SingleDiscussion/:category" component={SingleDiscussion} />
+        <Route path="/SingleDiscussion/:category/:id" component={SingleDiscussion} />
         {/* <Route exact path={process.env.PUBLIC_URL + "/forum"} component={Forum} /> */}
 
       </div>
