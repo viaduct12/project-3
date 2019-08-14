@@ -4,7 +4,7 @@
 
 ## Description
 
-Our mission is to provide a wide range of news outlets and give you topics to discover…it’s free and an easy way to explore news. We wanted to create a website where the users can find news on out selected categories. 
+Our mission is to provide a wide range of news outlets and give you topics to discover…it’s free and an easy way to explore news. We wanted to create a website where the users can find news on our selected categories. 
 
 
 ## Built With 
