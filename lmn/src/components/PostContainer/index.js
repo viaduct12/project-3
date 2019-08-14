@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-export default function PostsContainer(props) {
+export default function PostContainer(props) {
   return (
     
     <div className="col s6" id="discussion-container">
