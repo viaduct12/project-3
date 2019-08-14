@@ -78,24 +78,9 @@ render () {
   <div className="container">
       <div className="col s6" id="discussion-container">
       {/* z-depth-2 */}
-<<<<<<< HEAD
         <h2>{this.props.match.params.category} discussion</h2>
       {/* <div className="divider"></div> */}
         <PostContainer/>
-=======
-        <h2>{this.state.category} discussion</h2>
-
-      <div className="divider"></div>
-        
-          <PostContainer
-            id={this.state.post.id}
-            topic={this.state.post.topic}
-            username={this.state.post.username}
-            description={this.state.post.description}
-            createdAt={this.state.post.createdAt}
-            category={this.state.post.category}
-          />
->>>>>>> 3281b3d5c4e0bf5d52e79c9dc630c670ddc7f493
 
           <div className="aside">
           <LikeDislike/>

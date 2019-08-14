@@ -6,7 +6,6 @@ import "./style.css";
 function Navbar() {
 
   return (
-<<<<<<< HEAD
     <nav className="nav">
       <div className="nav-wrapper">
       <Link className="brand-logo right" to="/">
@@ -14,17 +13,6 @@ function Navbar() {
       {/* <img className="responsive-img" src="./image/LMN_solid.png" alt="logo"/> */}
 
       </Link>
-=======
-    <nav className="navbar">
-       <Link className="brand-logo right" to="/">
-        <p>
-          <img className="logoNavbar" src="./image/LMN_solid.png" alt=""/> 
-          L M N
-        </p>
-
-      
-      </Link> 
->>>>>>> 3281b3d5c4e0bf5d52e79c9dc630c670ddc7f493
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
