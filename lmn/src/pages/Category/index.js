@@ -54,6 +54,7 @@ render () {
         {this.state.posts.map(postCategory => (
           <PostContainer
             key={postCategory.id}
+            id={postCategory.id}
             topic={postCategory.topic}
             username={postCategory.username}
             description={postCategory.description}

@@ -10,7 +10,7 @@ export default function PostContainer(props) {
     //   <h2>Discussions</h2>
     // <div className="divider"></div>
       <div className={`section ${props.category}`}>
-      <Link to={`/singleDiscussion/${props.category}`}>
+      <Link to={`/singleDiscussion/${props.category}/${props.id}`}>
         <h5>{props.topic}</h5>
         </Link>
         <h6>{props.username}</h6>

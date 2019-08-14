@@ -59,7 +59,7 @@ render () {
   <div className="container">
       <div className="col s6" id="discussion-container">
       {/* z-depth-2 */}
-        <h2>CATEGORY Discussion</h2>
+        <h2>{this.props.match.params.category} discussion</h2>
       {/* <div className="divider"></div> */}
         <PostContainer/>
 
