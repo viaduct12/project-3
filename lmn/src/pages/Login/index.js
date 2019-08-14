@@ -39,7 +39,7 @@ class Login extends React.Component {
             {/* </div> */}
             <div className="front" id="containerLogin">
             {/* <img class="responsive" id="loginBPicture" src={titleImage} alt="" /> */}
-                <h1>Login!</h1>
+                <h1>login</h1>
                 <form onSubmit={this.handleSubmit}>
                     <input id="input" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="email"/><br/>
                     <input id="input" type="password" name="password" value={this.state.password} onChange={this.handleChange} placeholder="password"/><br/>

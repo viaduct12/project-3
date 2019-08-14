@@ -18,8 +18,8 @@ state = {
 }
 
   componentDidMount() {
-    this.fetchPosts();
     // this.changeCategory();
+    this.fetchPosts();
   }
 
   fetchPosts = () => {
