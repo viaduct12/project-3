@@ -1,4 +1,4 @@
-eimport React, { Component } from "react";
+import React, { Component } from "react";
 import API from "../../utils/API";
 import ArticleContainer from "../../components/ArticleContainer";
 import PodcastContainer from "../../components/PodcastContainer";

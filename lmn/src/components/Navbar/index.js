@@ -7,10 +7,14 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link className="brand-logo right" to="/">
-      Learn More News
-      <img src="./image/LMN_solid.png" alt="logo"/>
-      </Link>
+       <Link className="brand-logo right" to="/">
+        <p>
+          <img className="logoNavbar" src="./image/LMN_solid.png" alt=""/> 
+          L M N
+        </p>
+
+      
+      </Link> 
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">

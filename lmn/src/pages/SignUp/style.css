@@ -6,8 +6,8 @@ body {
     border-radius: 25px;
     background-color: lightcoral;
     text-align: center;
-    height: 35vh;
-    width: 35vh;
+    height: 50%;
+    width: 30%;
     margin-top: 50px;
     position: absolute;
     z-index: 10;
@@ -26,6 +26,7 @@ body {
     cursor: pointer;
     color: white;
     font-family: monospace;
+    font-weight: 30px;
 }
 
 
