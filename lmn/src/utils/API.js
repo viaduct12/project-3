@@ -38,15 +38,15 @@ export default {
   },
   createUser: function(userInfo){
     // console.log(userInfo, "inside api request");
-    return axios.post("https://lmn-news-api.herokuapp.com/api/auth/signup", userInfo);
+    // return axios.post("https://lmn-news-api.herokuapp.com/api/auth/signup", userInfo);
 
     //test link
-    // return axios.post("http://localhost:3000/api/auth/signup", userInfo);
+    return axios.post("http://localhost:3000/api/auth/signup", userInfo);
   },
   loginUser: function(userCredentials) {
     console.log(userCredentials, "inside log in request");
-    return axios.post("https://lmn-news-api.herokuapp.com/api/auth/login", userCredentials);
-    // return axios.post("http://localhost:3000/api/auth/login", userCredentials);
+    // return axios.post("https://lmn-news-api.herokuapp.com/api/auth/login", userCredentials);
+    return axios.post("http://localhost:3000/api/auth/login", userCredentials);
   },
   // probably unnecessary
   forumCategory: function(query) {
