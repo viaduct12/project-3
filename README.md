@@ -4,12 +4,18 @@
 
 ## Description
 
-Our mission is to provide a wide range of news outlets and topics for you to discover. A free and easy way to explore news! 
+Our mission is to provide a wide range of news outlets and give you topics to discover…it’s free and an easy way to explore news. We wanted to create a website where the users can find news on out selected categories. 
+
 
 ## Built With 
 - React 
 - MySQL
+- Sequalize 
+- React String
 
+## API
+- Listen API
+- Youtube 
 
 ### Authors 
 - [Lawrence](https://github.com/viaduct12)
