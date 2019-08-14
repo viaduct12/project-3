@@ -4,17 +4,26 @@
   position: relative;
   cursor: default;
   user-select:none;
+  
 }
 
 .animatedTextContent {
   color: #000000;
+<<<<<<< HEAD
   font-size: 100px;
   font-weight: 600;
   font-family: "Graduate";
+=======
+  font-size: 60px;
+  font-weight: 200px;
+  text-align: left;
+  font-family: monospace;
+>>>>>>> 3281b3d5c4e0bf5d52e79c9dc630c670ddc7f493
   line-height: 1.1;
   letter-spacing: 5px;
   text-shadow: 5px 3px 8px rgba(0, 0, 0, 0.2);
   margin: 0;
+  
 }
 
 .animatedTextContentClone {

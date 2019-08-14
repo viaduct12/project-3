@@ -1,3 +1,48 @@
 nav.navbar.navbar-default {
   margin-bottom: 0;
 }
+
+.navbar {
+  background-color: black;
+  font-family: monospace;
+
+  
+}
+
+/* -------------doesnt work */
+ Link:link {
+  color: white;
+}
+
+ Link:visited {
+  color: grey;
+}
+
+ Link:hover {
+  color: grey;
+}
+ Link:active {
+  color: grey;
+}
+/* -------------doesnt work */
+
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive Link.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive Link {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+p {
+  font-family: monospace;
+  font-size: 80%;
+}
+

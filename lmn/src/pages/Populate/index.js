@@ -12,9 +12,7 @@ import axios from 'axios';
 require("dotenv").config();
 
 
-const KEY = process.env.REACT_APP_YOUTUBE_KEY;
-
-
+const KEY = process.env.REACT_APP_YOUTUBE_KEY
 class Populate extends Component {
 
     state = {
@@ -51,9 +49,9 @@ class Populate extends Component {
 
     }
 
-    componentDidUpdate(){
+    componentDidUpdate(prevProps, prevState){
         
-        if(this.state.articles.length <= 0){
+        if(this.state.articles.length === 0){
             this.fetchArticles();
         }
     }

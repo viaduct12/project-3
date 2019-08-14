@@ -9,6 +9,7 @@ class Searchbar extends React.Component {
             term: event.target.value
         });
     };
+    
     handleSubmit = event => {
         console.log(event)
         event.preventDefault();
