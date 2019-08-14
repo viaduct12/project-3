@@ -56,7 +56,14 @@ forumCategory: function(query) {
 createPost: function(postObj){
   console.log(postObj, "tee hee");
   return axios.post('http://localhost:3000/api/post/create', postObj)
+},
+
+getPost: function(postCategory){
+  console.log(postCategory, "get function");
+  return axios.get("http://localhost:3000/api/post/get/" + postCategory);
+
 }
+
 
 }
 
