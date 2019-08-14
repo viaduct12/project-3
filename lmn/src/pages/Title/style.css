@@ -1,5 +1,5 @@
 
-#abdul {
+/* #abdul {
     height:60%;
     width: 80%;
     margin-left: 20%;
@@ -13,4 +13,13 @@
     width: 100vw;
     position: absolute;
 }
+ */
 
+.titleImage {
+    text-align: center;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: black;
+    padding: 0 10px;
+}
