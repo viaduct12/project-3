@@ -43,7 +43,10 @@ render () {
       </div>
       </div>
       
-
+        <div className="col s6" id="discussion-container">
+          {/* z-depth-2 */}
+          <h2>Discussions</h2>
+          <div className="divider"></div>
         {this.state.posts.map(postCategory => (
           <PostContainer
             key={postCategory.id}
@@ -53,6 +56,7 @@ render () {
             createdAt={postCategory.createdAt}
           />
         ))}
+        </div>
   {/* <Discussions/> */}
     {/* <ul className="pagination">
   <li className="disabled"><a href="#!"><i className="material-icons">chevron_left</i></a></li>
