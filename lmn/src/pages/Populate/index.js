@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+eimport React, { Component } from "react";
 import API from "../../utils/API";
 import ArticleContainer from "../../components/ArticleContainer";
 import PodcastContainer from "../../components/PodcastContainer";
 // import Wrapper from "../../components/Wrapper";
 import './style.css';
-import Searchbar from '../../components/Youtube/SearchBar';
+import Searchbar from '../../components/Youtube/Searchbar';
 // import yo    utube from "../../components/Youtube/youtube";
 import VideoList from '../../components/Youtube/VideoList';
 import VideoDetail from '../../components/Youtube/VideoDetail';
@@ -12,8 +12,7 @@ import axios from 'axios';
 require("dotenv").config();
 
 
-const KEY = 'AIzaSyAFUNYmE1gfydRFrlb3Q05gXlPSgQmiY6I';
-
+const KEY = process.env.REACT_APP_YOUTUBE_KEY
 class Populate extends Component {
 
     state = {
