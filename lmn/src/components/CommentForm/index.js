@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './style.css';
 
 export default class CommentForm extends Component {
   constructor(props) {
@@ -87,7 +88,7 @@ export default class CommentForm extends Component {
 
   renderError() {
     return this.state.error ? (
-      <div className="alert alert-danger">{this.state.error}</div>
+      <div className="alert alert-danger" id="comment-alert">{this.state.error}</div>
     ) : null;
   }
 
