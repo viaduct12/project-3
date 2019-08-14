@@ -24,6 +24,7 @@ class SignUp extends React.Component {
         event.preventDefault();
         // alert('here is value ' + this.state.value);
         API.createUser(this.state).then(res => {
+            console.log("hello");
             Auth.setToken(res.data.token);
             this.props.history.push('/discover');
         }).catch(err => console.log(err));

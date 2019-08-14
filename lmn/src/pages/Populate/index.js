@@ -5,7 +5,7 @@ import PodcastContainer from "../../components/PodcastContainer";
 // import Wrapper from "../../components/Wrapper";
 import './style.css';
 import Searchbar from '../../components/Youtube/Searchbar';
-// import yo    utube from "../../components/Youtube/youtube";
+// import youtube from "../../components/Youtube/youtube";
 import VideoList from '../../components/Youtube/VideoList';
 import VideoDetail from '../../components/Youtube/VideoDetail';
 import axios from 'axios';
