@@ -7,6 +7,7 @@ import TextArea from '../TextArea';
 import PostButton from '../PostButton';
 import DiscardButton from '../DiscardButton';
 import Options from '../Options';
+import API from "../../utils/API";
 
 class Modal extends Component {
   constructor(props){
@@ -16,9 +17,8 @@ class Modal extends Component {
       newPost: {
         username: '',
         title: '',
-        text: '',
-        tags: '',
-        category: []
+        description: '',
+        category: this.props.category
       },
 
       categoryOptions: ['Anime & Gaming', 'Charities', 'Design', 'Environment', 'Media', 'Movements', 'Politics', 'Podcasts', 'Sports', 'Technology']
@@ -26,6 +26,9 @@ class Modal extends Component {
 
     this.handleTextArea = this.handleTextArea.bind(this);
     this.handleInput = this.handleInput.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.handleClearForm = this.handleClearForm.bind(this);
+    this.handleOption = this.handleOption.bind(this);
 
   }
 
@@ -72,29 +75,28 @@ handleInput(e) {
     let value = e.target.value;
     this.setState(prevState => ({
       newPost: {
-        ...prevState.newPost, about: value
+        ...prevState.newPost, description: value
       }
       }), ()=>console.log(this.state.newPost))
   }
 
-  // handleFormSubmit(e) {
-  //   e.preventDefault();
-  //   let postData = this.state.newPost;
 
-  //   // fetch('http://example.com',{
-  //   //     method: "POST",
-  //   //     body: JSON.stringify(postData),
-  //   //     headers: {
-  //   //       'Accept': 'application/json',
-  //   //       'Content-Type': 'application/json'
-  //   //     },
-  //   //   })
-  //     .then(response => {
-  //       response.json().then(data =>{
-  //         console.log("Successful" + data);
-  //       })
-  //   })
-  // } 
+handleOption(e) {
+  e.preventDefault();
+
+
+
+}
+
+  handleFormSubmit(e) {
+    e.preventDefault();
+    let postData = this.state.newPost;
+    console.log(postData)
+    API.createPost(postData)
+      .then(response => {
+          console.log("Successful" + response);
+        })
+  } 
 
   handleClearForm(e) {
   
@@ -103,8 +105,7 @@ handleInput(e) {
       newPost: {
         username: '',
         title: '',
-        text: '',
-        tags: '',
+        description: '',
         category: []
       },
     })
@@ -136,18 +137,18 @@ handleInput(e) {
             <Input inputType={'text'}
             title= {'Username'} 
             name= {'username'}
-            value={this.state.newPost.name} 
+            value={this.state.newPost.username} 
             placeholder = {'Enter your name'}
             handleChange = {this.handleInput}/> 
               {/* Name of the topic */}
             <Input inputType={'text'}
                   title= {'Topic'} 
-                  name= {'name'}
-                  value={this.state.newPost.name} 
+                  name= {'title'}
+                  value={this.state.newPost.title} 
                   placeholder = {'Enter your topic'}
                   handleChange = {this.handleInput}/> 
           {/* Category Options */}
-            <Options/>
+            <Options action={this.handleOption}/>
           {/* Discussion*/}
           <TextArea
             title={'What would you like to discuss?'}
@@ -158,11 +159,11 @@ handleInput(e) {
             placeholder={'type away!'} />
 
           <div className="modal-footer">
-            <PostButton/>
+            <PostButton action={this.handleFormSubmit}/>
             {/* <button action={this.handleSubmitForm} type={'primary'} title={'submit'} className="modal-close waves-effect waves-green btn-flat">
               Post
             </button> */}
-              <DiscardButton/>
+              <DiscardButton action={this.handleClearForm}/>
             {/* <button action={this.handleClearForm} type={'secondary'} title={'clear'}  className="modal-close waves-effect waves-red btn-flat">
               Discard</button> */}
             </div>

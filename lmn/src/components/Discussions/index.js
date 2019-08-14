@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './style.css';
 
 
-export default function Discussions (props) {
+class Discussions extends Component {
 
-  return (
+
+  render() {
+    return (
 
     <div className="col s6" id="discussion-container">
     {/* z-depth-2 */}
@@ -67,4 +69,9 @@ export default function Discussions (props) {
 </div>
   )
 
+  }
+  
 }
+
+
+export default Discussions;

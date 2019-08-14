@@ -23,7 +23,7 @@ render () {
         <h2>{this.state.category} forum</h2>
     {/* This div is 12-columns wide on all screen sizes */}      
       {/* <a className="waves-effect waves-light btn right" id="new-topic-btn">Create a new topic</a> */}
-      <Modal/>
+      <Modal category={this.state.category}/>
       </div>
       </div>
       </div>
