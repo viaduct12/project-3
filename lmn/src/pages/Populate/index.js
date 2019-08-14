@@ -50,6 +50,12 @@ class Populate extends Component {
 
     }
 
+    componentDidUpdate(){
+        
+        if(this.state.articles.length <= 0){
+            this.fetchArticles();
+        }
+    }
 
     loadArticles = () => {
         API.scrapeArticles(this.state.category).then()

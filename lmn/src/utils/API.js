@@ -15,12 +15,12 @@ const headers = () => {
 export default {
   scrapeArticles: function(query) {
     console.log("scrape test");
-    // return axios.get("https://lmn-news-api.herokuapp.com/scrape/" + query);
-    return axios.get("http://localhost:3000/api/article/scrape/" + query);
+    return axios.get("https://lmn-news-api.herokuapp.com/api/article/scrape/" + query);
+    // return axios.get("http://localhost:3000/api/article/scrape/" + query);
   },
   getArticles: function(query) {
-    // return axios.get("https://lmn-news-api.herokuapp.com/api/" + query)
-    return axios.get("http://localhost:3000/api/article/get/" + query);
+    return axios.get("https://lmn-news-api.herokuapp.com/api/article/get/" + query)
+    // return axios.get("http://localhost:3000/api/article/get/" + query);
   },
 
   searchPodcast: function(query) {
@@ -38,15 +38,15 @@ export default {
   },
   createUser: function(userInfo){
     // console.log(userInfo, "inside api request");
-    // return axios.post("https://lmn-news-api.herokuapp.com/api/auth/signup", userInfo);
+    return axios.post("https://lmn-news-api.herokuapp.com/api/auth/signup", userInfo);
 
     //test link
-    return axios.post("http://localhost:3000/api/auth/signup", userInfo);
+    // return axios.post("http://localhost:3000/api/auth/signup", userInfo);
   },
   loginUser: function(userCredentials) {
     console.log(userCredentials, "inside log in request");
-    // return axios.post("https://lmn-news-api.herokuapp.com/api/auth/login", userCredentials);
-    return axios.post("http://localhost:3000/api/auth/login", userCredentials);
+    return axios.post("https://lmn-news-api.herokuapp.com/api/auth/login", userCredentials);
+    // return axios.post("http://localhost:3000/api/auth/login", userCredentials);
   },
   // probably unnecessary
   forumCategory: function(query) {
@@ -54,13 +54,13 @@ export default {
   },  
 
   createPost: function(postObj){
-    // return axios.post("https://lmn-news-api.herokuapp.com/api/post/create", postObj);
-    return axios.post('http://localhost:3000/api/post/create', postObj)
+    return axios.post("https://lmn-news-api.herokuapp.com/api/post/create", postObj);
+    // return axios.post('http://localhost:3000/api/post/create', postObj)
   },
 
   getPost: function(postCategory){
-    // return axios.post("https://lmn-news-api.herokuapp.com/api/post/get/" + postCategory);
-    return axios.get("http://localhost:3000/api/post/get/" + postCategory);
+    return axios.post("https://lmn-news-api.herokuapp.com/api/post/get/" + postCategory);
+    // return axios.get("http://localhost:3000/api/post/get/" + postCategory);
 
   }
 
