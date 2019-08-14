@@ -5,6 +5,7 @@ import './style.css';
 import LikeDislike from '../../components/LikeDislikeButton';
 import CommentList from '../../components/CommentList';
 import CommentForm from '../../components/CommentForm';
+import PostContainer from '../../components/PostContainer';
 
 
 
@@ -59,20 +60,17 @@ render () {
       <div className="col s6" id="discussion-container">
       {/* z-depth-2 */}
         <h2>CATEGORY Discussion</h2>
-      <div className="divider"></div>
-        <div className="section">
-          <h5>Title</h5>
-          <h6>Description</h6>
-          <p>lorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem 
-          </p>
+      {/* <div className="divider"></div> */}
+        <PostContainer/>
+
           <div className="aside">
           <LikeDislike/>
           </div>
-        </div>
+      
 
 {/* Comment area */}
 
-        <div className="row">
+        <div className="row" id="comment-area">
           <div className="col-4  pt-3 border-right">
             <h6>Comment Section</h6>
             {/* Comment Form Component */}
