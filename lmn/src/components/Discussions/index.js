@@ -1,27 +1,14 @@
 import React, { Component } from 'react';
 import './style.css';
+<<<<<<< HEAD:lmn/src/components/Discussions/index.js
 import API from '../../utils/API';
+=======
+// import API from '../../utils/API';
+>>>>>>> ed189a9eaed1b75c8407b3cd31302e25f2d00779:lmn/src/components/Discussions/index.js
 import PostContainer from '../PostContainer';
 
 class Discussions extends Component {
 
-state = {
-  category: this.props.match.params.category,
-  posts: []
-}
-
-componentDidMount() {
-  this.fetchPosts();
-}
-
-fetchPosts = () => {
-  console.log("wake up!!");
-  API.getPost(this.state.category).then(res =>
-    this.setState({
-        posts: res.data
-    }))
-.catch(err => console.log(err))
-}
 
 
   render() {
