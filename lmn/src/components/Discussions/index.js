@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import API from '../../utils/API';
-import PostContainer from '../components/PostContainer';
+import PostContainer from '../PostContainer';
 
 class Discussions extends Component {
 
