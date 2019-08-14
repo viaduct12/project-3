@@ -3,13 +3,28 @@ import './style.css';
 import Modal from '../../components/Modal';
 import Categories from '../../components/Categories';
 import Discussions from '../../components/Discussions';
+import API from "../../utils/API";
 
 
 class Category extends Component {
 
 state = {
-  category: this.props.match.params.category
+  category: this.props.match.params.category,
+  posts: []
 }
+
+  componentDidMount() {
+    this.fetchPosts();
+  }
+
+  fetchPosts = () => {
+    console.log("wake up!!");
+    API.getPost(this.state.category).then(res =>
+      this.setState({
+        posts: res.data
+      }))
+      .catch(err => console.log(err))
+  }
 
 
 render () {
@@ -28,7 +43,7 @@ render () {
       </div>
       </div>
       
-  <Discussions/>
+  {/* <Discussions/> */}
     {/* <ul className="pagination">
   <li className="disabled"><a href="#!"><i className="material-icons">chevron_left</i></a></li>
   <li className="active"><a href="#!">1</a></li>
