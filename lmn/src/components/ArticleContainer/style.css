@@ -1,10 +1,20 @@
+#article-card {
+  width: 18rem;
+  text-align: center;
+}
 #article-btn {
   margin: 5px;
   background-color: lightseagreen;
   border: none;
   font-size: 13px;
+  text-align: center;
 }
 
 .card-text {
   font-size: 14px;
 }
+
+.card-title {
+  color: black;
+}
+

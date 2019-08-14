@@ -33,16 +33,14 @@ body {
 }
 
 #containerYoutube {
-
     width: 100%;
+    height: auto;
     border-radius: 20px;
-    background-color: white;
-    margin-top: 40%;
+    /* background-color: white; */
+    margin: 40px;
     margin-left: -16%;
     /* flex: 1;
     height: 70%;
-    
-    
     width: 60vh; */
     text-align: left;
 }
@@ -52,14 +50,13 @@ body {
 #containerNews {
 
     border-radius: 20px;
-    background-color:#6CDAE7;
-    margin-top: 40%;
+    /* background-color:#6CDAE7; */
+    /* margin-top: 40%; */
+    margin-right: 40px;
     width: 100%;
+    height: auto;
     /* flex: 0 0 65%;
-
-
     margin-left: 80%;
-    
     float: left;
     text-align: left; */
 }
@@ -67,10 +64,11 @@ body {
 #containerPodcast {
     
     border-radius: 20px;
-    background-color: #FC74FD;
-    margin-top: 40%;
+    /* background-color: #FC74FD; */
+    /* margin-top: 40%; */
+    margin: 40px;
     width: 100%;
-    
+    height: auto;
     /* flex: 1;
     height: 40%;
     margin-left: 40%;

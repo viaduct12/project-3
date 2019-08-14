@@ -83,7 +83,6 @@ class Populate extends Component {
         return (
             <div id="containerOfpopulatedPage" className="container">
                 {/* <h1 id="titleDiscover">Discover</h1> */}
-            
 
                 {/* -------------------YOUTUBE---------------- */}
                 {/* <div id="containerPopulated"> */}
@@ -100,8 +99,6 @@ class Populate extends Component {
                             </div>
                         </div>
                     </div>
-
-                    
                     <br/>
                     <br/>
                     <br/>

@@ -27,6 +27,11 @@ h1, h2 {
     color: white;
 }
 
+h1 {
+    text-align: center;
+    padding: 5px;
+}
+
 #titleFav {
     margin-left: -25%;
 }
@@ -64,7 +69,7 @@ h1, h2 {
 
 #row1L {
     border-radius: 20px;
-    background-color:#6CDAE7;
+    background-color:rgb(55, 165, 177);
     flex: 0 0 65%;
     height: 40%;
     width: 30%;
@@ -86,7 +91,7 @@ h1, h2 {
 
 #row3L {
     border-radius: 20px;
-    background-color: greenyellow;
+    background-color: rgb(121, 180, 33);
     flex: 0 0 65%;
     height: 40%;
     width: 30%;
