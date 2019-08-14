@@ -8,14 +8,15 @@ Our mission is to provide a wide range of news outlets and give you topics to di
 
 
 ## Built With 
-- React 
-- MySQL
-- Sequalize 
-- React String
+- [React](https://reactjs.org/) 
+- [MySQL](https://www.mysql.com/)
+- [Sequelize](https://www.npmjs.com/package/sequelize)
+- [React String](https://www.npmjs.com/package/react-string)
+- [Materialize](https://materializecss.com/)
 
 ## API
-- Listen API
-- Youtube 
+- [Listen Api](https://www.listennotes.com/api/)
+- [Youtube](https://developers.google.com/youtube/v3/) 
 
 ### Authors 
 - [Lawrence](https://github.com/viaduct12)
