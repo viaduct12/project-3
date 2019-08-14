@@ -18,11 +18,12 @@ state = {
 }
 
   componentDidMount() {
+    // this.changeCategory();
     this.fetchPosts();
   }
 
   fetchPosts = () => {
-    console.log("wake up!!");
+    console.log(this.state.category, "category stuff");
     API.getPost(this.state.category).then(res =>
       this.setState({
         posts: res.data
@@ -30,6 +31,20 @@ state = {
       .catch(err => console.log(err))
   }
 
+  // changeCategory = () => {
+  //   this.setState({
+  //     category: this.props.match.params.category
+  //   });
+  // }
+  // componentDidUpdate(prevProps) {
+  //   // this.fetchPosts();
+  //   if (prevProps.location.pathname !== this.props.location.pathname) {
+  //     this.changeCategory();
+  //     this.fetchPosts();
+  //   }
+  //   // console.log(snapshot, "snapshot");
+  //   // this.fetchPost();
+  // }
 
 render () {
   return (

@@ -49,9 +49,9 @@ class Populate extends Component {
 
     }
 
-    componentDidUpdate(){
+    componentDidUpdate(prevProps, prevState){
         
-        if(this.state.articles.length <= 0){
+        if(this.state.articles.length === 0){
             this.fetchArticles();
         }
     }

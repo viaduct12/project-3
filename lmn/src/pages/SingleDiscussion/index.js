@@ -6,6 +6,7 @@ import LikeDislike from '../../components/LikeDislikeButton';
 import CommentList from '../../components/CommentList';
 import CommentForm from '../../components/CommentForm';
 import PostContainer from '../../components/PostContainer';
+import API from "../../utils/API";
 
 
 
@@ -14,6 +15,9 @@ class SingleDiscussion extends Component {
     super(props);
 
     this.state = {
+      category: "",
+      id: this.props.match.params.id,
+      post: [],
       comments: [],
       loading: false
     };
@@ -22,21 +26,36 @@ class SingleDiscussion extends Component {
   }
 
   componentDidMount() {
+    this.fetchPost();
+    this.changeCategory();
+  }
+
+  changeCategory = () => {
+    this.setState({
+      category: this.props.match.params.category
+    });
+  }
+  componentDidUpdate(prevProps, prevState, snapshot){
+    if(prevState.category !== this.state.category){
+      this.fetchPost();
+    }
+    // console.log(snapshot, "snapshot");
+    // this.fetchPost();
+  }
+  fetchPost = () => {
     // loading
     this.setState({ loading: true });
 
     // get all the comments
-    fetch("http://localhost:3000")
-      .then(res => res.json())
-      .then(res => {
-        this.setState({
-          comments: res,
-          loading: false
-        });
+    API.getOnePost(this.state.category, this.state.id).then(result => {
+      this.setState({
+        post: result.data,
+        loading: false
       })
-      .catch(err => {
-        this.setState({ loading: false });
-      });
+    }).catch(err => {
+      this.setState({ loading: false });
+    });
+
   }
 
   /**
@@ -59,9 +78,18 @@ render () {
   <div className="container">
       <div className="col s6" id="discussion-container">
       {/* z-depth-2 */}
-        <h2 clasName="title-category">CATEGORY Discussion</h2>
-      {/* <div className="divider"></div> */}
-        <PostContainer/>
+        <h2>{this.state.category} discussion</h2>
+
+      <div className="divider"></div>
+        
+          <PostContainer
+            id={this.state.post.id}
+            topic={this.state.post.topic}
+            username={this.state.post.username}
+            description={this.state.post.description}
+            createdAt={this.state.post.createdAt}
+            category={this.state.post.category}
+          />
 
           <div className="aside">
           <LikeDislike/>

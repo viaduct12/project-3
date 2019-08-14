@@ -15,12 +15,12 @@ const headers = () => {
 export default {
   scrapeArticles: function(query) {
     console.log("scrape test");
-    return axios.get("https://lmn-news-api.herokuapp.com/api/article/scrape/" + query);
-    // return axios.get("http://localhost:3000/api/article/scrape/" + query);
+    // return axios.get("https://lmn-news-api.herokuapp.com/api/article/scrape/" + query);
+    return axios.get("http://localhost:3000/api/article/scrape/" + query);
   },
   getArticles: function(query) {
-    return axios.get("https://lmn-news-api.herokuapp.com/api/article/get/" + query)
-    // return axios.get("http://localhost:3000/api/article/get/" + query);
+    // return axios.get("https://lmn-news-api.herokuapp.com/api/article/get/" + query)
+    return axios.get("http://localhost:3000/api/article/get/" + query);
   },
 
   searchPodcast: function(query) {
@@ -54,16 +54,20 @@ export default {
   },  
 
   createPost: function(postObj){
-    return axios.post("https://lmn-news-api.herokuapp.com/api/post/create", postObj);
-    // return axios.post('http://localhost:3000/api/post/create', postObj)
+    // return axios.post("https://lmn-news-api.herokuapp.com/api/post/create", postObj);
+    return axios.post('http://localhost:3000/api/post/create', postObj)
   },
 
+  //gets all post of said category
   getPost: function(postCategory){
-    return axios.get("https://lmn-news-api.herokuapp.com/api/post/get/" + postCategory);
-    // return axios.get("http://localhost:3000/api/post/get/" + postCategory);
+    // return axios.get("https://lmn-news-api.herokuapp.com/api/post/get/" + postCategory);
+    return axios.get("http://localhost:3000/api/post/get/" + postCategory);
+  },
 
+  getOnePost: function(postCategory, postId) {
+    // return axios.get("https://lmn-news-api.herokuapp.com/api/post/get/" + postCategory + postId);
+    return axios.get("http://localhost:3000/api/post/get/" + postCategory +"/"+ postId);
   }
-
 
 }
 
