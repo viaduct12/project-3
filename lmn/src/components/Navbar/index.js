@@ -4,10 +4,12 @@ import "./style.css";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" to="/">
-        Learn More News
+    <nav className="navbar">
+      <Link className="brand-logo right" to="/">
+      Learn More News
+      <img src="./image/LMN_solid.png" alt="logo"/>
       </Link>
       <div>
         <ul className="navbar-nav">
@@ -34,6 +36,14 @@ function Navbar() {
               className={window.location.pathname === "/discover" ? "nav-link active" : "nav-link"}
             >
               Discover
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/forum"
+              className={window.location.pathname === "/forum" ? "nav-link active" : "nav-link"}
+            >
+              Forum
             </Link>
           </li>
           <li className="nav-item">

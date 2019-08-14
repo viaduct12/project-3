@@ -1,28 +1,69 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './style.css';
 import Modal from '../../components/Modal';
 import Categories from '../../components/Categories';
-import Discussions from '../../components/Discussions';
+
+// import Discussions from '../../components/Discussions';
+
+import PostContainer from "../../components/PostContainer";
+
+import API from "../../utils/API";
 
 
-export default function Topic () {
+class Category extends Component {
 
-return (
+state = {
+  category: this.props.match.params.category,
+  posts: []
+}
+
+  componentDidMount() {
+    this.fetchPosts();
+  }
+
+  fetchPosts = () => {
+    console.log("wake up!!");
+    API.getPost(this.state.category).then(res =>
+      this.setState({
+        posts: res.data
+      }))
+      .catch(err => console.log(err))
+  }
+
+
+render () {
+  return (
   <div className="container">
   {/* <!-- Page Layout here --> */}
   <div className="row">
     <div className="col s12">
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
-        <h2>THIS WILL SAY THE Categories TITLE</h2>
+        <h2>{this.state.category} forum</h2>
     {/* This div is 12-columns wide on all screen sizes */}      
       {/* <a className="waves-effect waves-light btn right" id="new-topic-btn">Create a new topic</a> */}
-      <Modal/>
+      <Modal category={this.state.category}/>
       </div>
       </div>
       </div>
       
-  <Discussions/>
+        <div className="col s6" id="discussion-container">
+          {/* z-depth-2 */}
+          <h2>Discussions</h2>
+          <div className="divider"></div>
+        {this.state.posts.map(postCategory => (
+          <PostContainer
+            key={postCategory.id}
+            id={postCategory.id}
+            topic={postCategory.topic}
+            username={postCategory.username}
+            description={postCategory.description}
+            createdAt={postCategory.createdAt}
+            category={postCategory.category}
+          />
+        ))}
+        </div>
+  {/* <Discussions/> */}
     {/* <ul className="pagination">
   <li className="disabled"><a href="#!"><i className="material-icons">chevron_left</i></a></li>
   <li className="active"><a href="#!">1</a></li>
@@ -43,3 +84,7 @@ return (
   )
 
 }
+
+}
+
+export default Category;
