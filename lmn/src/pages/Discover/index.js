@@ -1,16 +1,34 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import './style.css';
 
 
-class Discover extends React.Component {
+class Discover extends Component {
+
+    // username = this.props.location.state.username;
+    state = {
+        username: ""
+    }
+
+    componentDidMount() {
+        this.setUsername();
+    }
+
+    setUsername = () => {
+        // console.log(this.props.location.state === undefined);
+        if (this.props.location.state === undefined) {
+            this.setState({ username: "______"})
+        } else {
+            this.setState({ username: this.props.location.state.username})
+        }
+    }
 
     render() {
         return (
             <div id="containerMe">
 
                 <div id="leftBlock">
-                    <h1>Hello ______ </h1>
+                    <h1>Hello {this.state.username} </h1>
                     <br />
                     <br />
                     <br />

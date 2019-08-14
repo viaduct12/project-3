@@ -9,6 +9,7 @@ class Login extends React.Component {
     state = {
         password: "",
         email: "",
+        username: ""
     };
 
     handleChange = (event) => { 
@@ -22,7 +23,8 @@ class Login extends React.Component {
         // alert('here is value ' + this.state.password + this.state.email);
         API.loginUser(this.state).then(res => {
             Auth.setToken(res.data.token);
-            this.props.history.push('/discover');
+            this.setState({username: res.data.username});
+            this.props.history.push({pathname: '/discover', state: {username: res.data.username}});
         }).catch(err => console.log(err));
 
     }

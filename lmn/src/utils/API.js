@@ -37,15 +37,15 @@ export default {
     return axios.get("https://developers.google.com/youtube/v3/docs/search/list" + query )
   },
   createUser: function(userInfo){
-    console.log(userInfo, "inside api request");
-    // return axios.post("https://lmn-news-api.herokuapp.com/api/signup", { data: {
+    // console.log(userInfo, "inside api request");
+    // return axios.post("https://lmn-news-api.herokuapp.com/api/auth/signup", userInfo);
 
     //test link
     return axios.post("http://localhost:3000/api/auth/signup", userInfo);
   },
   loginUser: function(userCredentials) {
     console.log(userCredentials, "inside log in request");
-    // return axios.post("https://lmn-news-api.herokuapp.com/api/login", { data: {
+    // return axios.post("https://lmn-news-api.herokuapp.com/api/auth/login", userCredentials);
     return axios.post("http://localhost:3000/api/auth/login", userCredentials);
   },
 // probably unnecessary
