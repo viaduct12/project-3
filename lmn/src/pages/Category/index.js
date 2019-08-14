@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './style.css';
 import Modal from '../../components/Modal';
 import Categories from '../../components/Categories';
-import Discussions from '../../components/Discussions';
+// import Discussions from '../../components/Discussions';
 import API from "../../utils/API";
 
 

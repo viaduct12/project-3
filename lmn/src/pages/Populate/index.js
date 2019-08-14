@@ -11,8 +11,7 @@ import VideoDetail from '../../components/Youtube/VideoDetail';
 import axios from 'axios';
 require("dotenv").config();
 
-
-const KEY = 'AIzaSyAFUNYmE1gfydRFrlb3Q05gXlPSgQmiY6I';
+const KEY = process.env.REACT_APP_YOUTUBE_KEY;
 
 class Populate extends Component {
 
