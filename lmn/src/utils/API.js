@@ -59,7 +59,7 @@ export default {
   },
 
   getPost: function(postCategory){
-    return axios.post("https://lmn-news-api.herokuapp.com/api/post/get/" + postCategory);
+    return axios.get("https://lmn-news-api.herokuapp.com/api/post/get/" + postCategory);
     // return axios.get("http://localhost:3000/api/post/get/" + postCategory);
 
   }
