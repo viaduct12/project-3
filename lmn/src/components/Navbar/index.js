@@ -6,15 +6,13 @@ import "./style.css";
 function Navbar() {
 
   return (
-    <nav className="navbar">
-       <Link className="brand-logo right" to="/">
-        <p>
-          <img className="logoNavbar" src="./image/LMN_solid.png" alt=""/> 
-          L M N
-        </p>
+    <nav className="nav">
+      <div className="nav-wrapper">
+      <Link className="brand-logo right" to="/">
+      Learn More News
+      {/* <img className="responsive-img" src="./image/LMN_solid.png" alt="logo"/> */}
 
-      
-      </Link> 
+      </Link>
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
@@ -68,6 +66,7 @@ function Navbar() {
             </Link>
           </li>
         </ul>
+      </div>
       </div>
     </nav>
   );
