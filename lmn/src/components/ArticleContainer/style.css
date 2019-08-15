@@ -1,9 +1,11 @@
 #article-card {
   width: 18rem;
   text-align: center;
+  border: 5px solid lightseagreen;
 }
 #article-btn {
   margin: 5px;
+height: auto;
   background-color: lightseagreen;
   border: none;
   font-size: 13px;
