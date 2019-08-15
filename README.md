@@ -18,6 +18,9 @@ Our mission is to provide a wide range of news outlets and give you topics to di
 - [Listen Api](https://www.listennotes.com/api/)
 - [Youtube](https://developers.google.com/youtube/v3/) 
 
+## Backend Server 
+- [LMN-API](https://lmn-news-api.herokuapp.com/api/article/all)
+
 ### Authors 
 - [Lawrence](https://github.com/viaduct12)
 - [Meghan](https://github.com/meghanmullally)
