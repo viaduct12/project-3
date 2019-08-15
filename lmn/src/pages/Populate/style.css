@@ -30,6 +30,8 @@ h1 {
 
 body {
     background-color: black;
+    margin: 0 auto;
+    padding: 0;
 }
 
 #containerYoutube {
