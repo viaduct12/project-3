@@ -6,7 +6,6 @@ import Categories from '../../components/Categories';
 import RecentPosts from '../../components/RecentPosts';
 
 
-
 export default function ForumFeed () {
 
 return (
