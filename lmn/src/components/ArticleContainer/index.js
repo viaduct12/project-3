@@ -3,7 +3,7 @@ import "./style.css";
 
 export default function ArticleContainer(props) {
   return (
-    <div className="card">
+    <div className="card" id="article-card">
       <div className="content">
         <div className="card-header">  
         <h6 className="card-title">{props.title}</h6>
