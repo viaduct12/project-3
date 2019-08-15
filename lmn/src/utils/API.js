@@ -1,17 +1,17 @@
 import axios from "axios";
-import Auth from "./Auth";
+// import Auth from "./Auth";
 require('dotenv').config();
 
-const headers = () => {
-  const options = {};
-  // if authenticated create Authorization header to add to api calls
-  if (Auth.isAuthenticated()) {
-    options["headers"] = {
-      "Authorization": `Bearer ${Auth.getToken()}`
-    }
-  }
-  return options;
-}
+// const headers = () => {
+//   const options = {};
+//   // if authenticated create Authorization header to add to api calls
+//   if (Auth.isAuthenticated()) {
+//     options["headers"] = {
+//       "Authorization": `Bearer ${Auth.getToken()}`
+//     }
+//   }
+//   return options;
+// }
 export default {
   scrapeArticles: function(query) {
     console.log("scrape test");
@@ -44,7 +44,7 @@ export default {
     // return axios.post("http://localhost:3000/api/auth/signup", userInfo);
   },
   loginUser: function(userCredentials) {
-    console.log(userCredentials, "inside log in request");
+    // console.log(userCredentials, "inside log in request");
     return axios.post("https://lmn-news-api.herokuapp.com/api/auth/login", userCredentials);
     // return axios.post("http://localhost:3000/api/auth/login", userCredentials);
   },
