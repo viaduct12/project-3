@@ -6,10 +6,10 @@ import "./style.css";
 function Navbar() {
 
   return (
-    <nav className="nav">
+    <nav className="nav navbar">
       <div className="nav-wrapper">
       <Link className="brand-logo right" to="/">
-      Learn More News
+      L M N
       {/* <img className="responsive-img" src="./image/LMN_solid.png" alt="logo"/> */}
 
       </Link>
