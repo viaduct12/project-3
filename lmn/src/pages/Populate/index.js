@@ -71,7 +71,8 @@ class Populate extends Component {
 
     searchListenAPI = () => {
         API.searchPodcast(this.state.category)
-        .then(res => this.setState({
+        .then(res => 
+        this.setState({
             podcasts: res.data.results
         })
         )
@@ -131,7 +132,7 @@ class Populate extends Component {
                     <div id="podcast">
                     {this.state.podcasts.map(podcastsObj => (
                         <PodcastContainer
-                            key={podcastsObj.podcast_id}
+                            key={podcastsObj.id}
                             audio={podcastsObj.audio}
                             image={podcastsObj.image}
                             title={podcastsObj.title_original}
