@@ -26,8 +26,8 @@ class Discover extends Component {
     render() {
         return (
             <div id="containerMe">
-                <div class="row">
-                    <div class="col s5">
+                <div className="row">
+                    <div className="col s5">
 
                         <div id="leftBlock">
                             <h1>Hello {this.state.username} </h1>
@@ -47,7 +47,7 @@ class Discover extends Component {
 
                 </div>
                     </div>
-                    <div class="col s5">
+                    <div className="col s5">
                     <div id="rightBlock">
                     <h1 id="titleFav">Discover</h1>
                     {/* -------------------ROW 1---------------- */}
@@ -112,7 +112,7 @@ class Discover extends Component {
 
 
                     </div>
-                    {/* <div class="col s1">3</div>
+                    {/* <div className="col s1">3</div>
                     <div class="col s1">4</div>
                     <div class="col s1">5</div>
                     <div class="col s1">6</div>
