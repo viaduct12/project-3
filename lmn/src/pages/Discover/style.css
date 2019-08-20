@@ -52,7 +52,7 @@ h2 {
     width: 59%;
     margin-top: 25px;
     /* z-index:999; */
-    position: fixed;
+    position: absolute;
 }
 
 .column {
