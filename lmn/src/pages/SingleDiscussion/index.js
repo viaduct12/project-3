@@ -80,7 +80,7 @@ render () {
       {/* z-depth-2 */}
         <h2>{this.props.match.params.category} discussion</h2>
       {/* <div className="divider"></div> */}
-        <PostContainer/>
+        <PostContainer username={this.state.post.username} createdAt={this.state.post.createdAt} description={this.state.post.description} topic={this.state.post.topic}/>
 
           <div className="aside">
           <LikeDislike/>

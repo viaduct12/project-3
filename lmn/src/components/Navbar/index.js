@@ -1,20 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+import logo from "./image/LMN_dots.png";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
 
   return (
-    <nav className="nav navbar">
-      <div className="nav-wrapper">
+    <nav className="navbar">
+      <div className="nav-wrapper black">
       <Link className="brand-logo right" to="/">
+      {/* <img className="responsive-img" src={logo} alt="logo"/> */}
       L M N
-      {/* <img className="responsive-img" src="./image/LMN_solid.png" alt="logo"/> */}
-
       </Link>
-      <div>
-        <ul className="navbar-nav">
+        <ul id="nav-mobile" className="left hide-on-med-and-down">
           <li className="nav-item">
             <Link
               to="/"
@@ -66,9 +65,11 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-      </div>
+
       </div>
     </nav>
+
+
   );
 }
 
