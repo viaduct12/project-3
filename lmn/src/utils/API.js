@@ -1,17 +1,17 @@
 import axios from "axios";
-// import Auth from "./Auth";
+import Auth from "./Auth";
 require('dotenv').config();
 
-// const headers = () => {
-//   const options = {};
-//   // if authenticated create Authorization header to add to api calls
-//   if (Auth.isAuthenticated()) {
-//     options["headers"] = {
-//       "Authorization": `Bearer ${Auth.getToken()}`
-//     }
-//   }
-//   return options;
-// }
+const headers = () => {
+  const options = {};
+  // if authenticated create Authorization header to add to api calls
+  if (Auth.isAuthenticated()) {
+    options["headers"] = {
+      "Authorization": `Bearer ${Auth.getToken()}`
+    }
+  }
+  return options;
+}
 export default {
   scrapeArticles: function(query) {
     // return axios.get("https://lmn-news-api.herokuapp.com/api/article/scrape/" + query);
@@ -52,7 +52,7 @@ export default {
     return axios.get('http://localhost:3000/api/forum' + query)
   },  
 
-  createPost: function(postObj){
+  createPost: function(postObj,){
     console.log("create", postObj);
     // return axios.post("https://lmn-news-api.herokuapp.com/api/post/create", postObj);
     return axios.post('http://localhost:3000/api/post/create', postObj)

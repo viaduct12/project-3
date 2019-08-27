@@ -15,8 +15,8 @@ class Discover extends Component {
     }
 
     setUsername = () => {
-        // console.log(this.props.location.state === undefined);
-        if (this.props.location.state === undefined) {
+        // console.log(this.props.location.state.username, "what is this?");
+        if (this.props.location.state === undefined || this.props.location.state.username === undefined) {
             this.setState({ username: "______"})
         } else {
             this.setState({ username: this.props.location.state.username})
