@@ -5,7 +5,7 @@ import './style.css';
 import Categories from '../../components/Categories';
 import RecentPosts from '../../components/RecentPosts';
 import API from "../../utils/API";
-import PostContainer from '../../components/PostContainer';
+// import PostContainer from '../../components/PostContainer';
 
 class ForumFeed extends Component {
 
