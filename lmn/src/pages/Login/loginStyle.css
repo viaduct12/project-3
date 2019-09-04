@@ -10,12 +10,11 @@ body {
     width: 35vh;
     margin-top: 50px;
     position: absolute;
-    z-index: 10;
-    margin-left: 40%;
-    margin-right: 50%;
+    /* z-index: 10; */
+    /* margin-left: 50%; */
+    margin-left: 50%;
     top: 10%;
     
-
 }
 
 .astext {
@@ -34,18 +33,19 @@ img {
     height: 100vh;
     width: 100vw;
 }
+
 h1 {
     color: white;
     font-family: monospace;
 }
 
 #input, input, textarea {
-    /* background: lightseagreen; */
+    
     height: 30%;
     width: 50%;
     border-radius: 25px;
-    color: lightseagreen;
-    /* border: 2px solid lightseagreen; */
+    color: white;
+    
 }
 
 #loginBPicture {
@@ -61,7 +61,6 @@ h1 {
 
 #loginBackground {
     position: relative
-    
 }
 
 #submitLogin {

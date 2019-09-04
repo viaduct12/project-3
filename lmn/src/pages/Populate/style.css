@@ -7,10 +7,14 @@
     width: 70%;
 } */
 
+<<<<<<< HEAD
+
+=======
 /* h1 {
     text-align: center;
     font-size: 30%;
 } */
+>>>>>>> f3d08605746859cc9e7d43c1f7dabdcacfcd0772
 
 #containerOfpopulatedPage {
     display: grid;
@@ -40,6 +44,10 @@ body {
     /* background-color: white; */
     margin: 40px;
     margin-left: -16%;
+    
+    flex: 1;
+
+    width: 100%;
     /* flex: 1;
     height: 70%;
     width: 60vh; */
