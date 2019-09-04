@@ -37,9 +37,29 @@ h2 {
     padding: 5px;
 }
 
-#titleFav {
-    margin-left: -25%;
+.topicName {
+    font-size: 100% ;
 }
+
+.blurbBlock {
+    font-size: 80% ;
+}
+
+#titleFav {
+    margin-left: -20%;
+    font-size: 150% ; 
+}
+
+.blurbBlock {
+    font-size: 60%;
+}
+
+.hello {
+    font-size: 150% ; 
+}
+
+
+
 #rightBlock {
 
     font-family: monospace;
@@ -73,7 +93,7 @@ h2 {
 
 
 #row1L {
-    border-radius: 20px;
+    border-radius: 15px;
     background-color:rgb(55, 165, 177);
     flex: 0 0 65%;
     height: 40%;
@@ -84,7 +104,7 @@ h2 {
 }
 
 #row2L {
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: #cc00cc ;
     flex: 0 0 65%;
     height: 40%;
@@ -95,7 +115,7 @@ h2 {
 }
 
 #row3L {
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: rgb(121, 180, 33);
     flex: 0 0 65%;
     height: 40%;
@@ -106,69 +126,80 @@ h2 {
 }
 
 #row4L {
-    border-radius: 20px;
-    background-color: red ;
+    border-radius: 15px;
+    background-color: red;
     flex: 0 0 65%;
     height: 40%;
-    width: 30%;
+    width: 35%;
     /* margin: 2 5px; */
-    margin: 15px;
+    margin: 10px;
     float: left;
 }
 
 #row5L {
-    border-radius: 20px;
-    background-color: violet ;
+    border-radius: 15px;
+    background-color: violet;
     flex: 0 0 65%;
     height: 40%;
     width: 35%;
     /* margin: 2 5px; */
-    margin: 15px;
+    margin: 10px;
     float: left;
 }
 
 #row1R {
-    border-radius: 20px;
+
+    border-radius: 15px;
     background-color: rgb(145, 18, 107);
-    flex: 1;
+    flex: 0 0 65%;
     height: 40%;
-    margin: 15px;
-    float: left;
     width: 35%;
+    /* margin: 2 5px; */
+    margin: 10px;
+    margin-top: 15px;
+    float: left;
 }
 
 #row2R {
-    border-radius: 20px;
-    background-color: blueviolet;
-    flex: 1;
+
+    border-radius: 15px;
+    background-color: blue;
+    flex: 0 0 65%;
     height: 40%;
-    margin: 15px;
-    float: left;
     width: 35%;
+    /* margin: 2 5px; */
+    margin: 10px;
+    margin-top: 15px;
+    float: left;
 }
 
 #row3R {
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: orange;
-    flex: 1;
+    flex: 0 0 65%;
     height: 40%;
-    margin: 15px;
-    float: left;
     width: 35%;
+    /* margin: 2 5px; */
+    margin: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
 }
 
 #row4R {
-    border-radius: 20px;
-    background-color: #cc00cc;
+    border-radius: 15px;
+    background-color: lightskyblue;
     flex: 1;
     height: 40%;
     margin: 15px;
+    margin-top: 10px;
+    margin-left: 20px;
     float: left;
     width: 35%;
 }
 
 #row5R {
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: lightskyblue;
     flex: 1;
     height: 40%;

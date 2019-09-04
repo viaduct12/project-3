@@ -30,17 +30,20 @@ class Discover extends Component {
                     <div className="col s5">
 
                         <div id="leftBlock">
-                            <h1>Hello {this.state.username} </h1>
+
+                            <div className="leftContainer">
+                            <h1 className="hello">Hello {this.state.username} </h1>
                             <br />
                             <div id="userInfoBlock">
-                                <p>Our mission is to provide a
+                                <p className="blurbBlock">Our mission is to provide a
                                 wide range of news outlets 
                                 and topics for you to 
                                 discover. </p>
-                                <p>A free and easy 
+                                <p className="blurbBlock" >A free and easy 
                                 way to explore news !</p>
                                 <br />
-                                <p id="explore">Explore, WAKE yourself -> </p>
+                                <p className="blurbBlock" id="explore">Explore, WAKE yourself -> </p>
+                            </div>
                     </div>
                     <br />
                     <br />
@@ -53,11 +56,11 @@ class Discover extends Component {
                     {/* -------------------ROW 1---------------- */}
                     <div className="row" id="row1">
                         <div className="column" id="row1L">
-                            <Link to="/populate/politics"><h2>politics</h2></Link>
+                            <Link to="/populate/politics"><h2 className="topicName">politics</h2></Link>
                         </div>
 
                         <div className="column" id="row1R">
-                            <Link to="/populate/technology"><h2>tech</h2></Link>
+                            <Link to="/populate/technology"><h2 className="topicName">tech</h2></Link>
                         </div>
                     </div>
                     {/* -------------------ROW 1---------------- */}
@@ -65,45 +68,45 @@ class Discover extends Component {
                     {/* -------------------ROW 2---------------- */}
                     <div className="row" id="row2">
                         <div className="column" id="row2L">
-                            <Link to="/populate/sports"><h2>sports</h2></Link>
+                            <Link to="/populate/sports"><h2 className="topicName">sports</h2></Link>
                         </div>
 
                         <div className="column" id="row2R">
-                            <Link to="/populate/media"><h2>media</h2></Link>
+                            <Link to="/populate/media"><h2 className="topicName">media</h2></Link>
                         </div>
                     </div>
                     {/* -------------------ROW 2---------------- */}
                     {/* -------------------ROW 3---------------- */}
                     <div className="row" id="row3">
                         <div className="column" id="row3L">
-                            <Link to="/populate/movements"><h2>movements</h2></Link>
+                            <Link to="/populate/movements"><h2 className="topicName" >movements</h2></Link>
                         </div>
 
                         <div className="column" id="row3R">
-                            <Link to="/populate/podcasts"><h2>podcasts</h2></Link>
+                            <Link to="/populate/anime_gaming"><h2 className="topicName">anime & games</h2></Link>
                         </div>
                     </div>
                     {/* -------------------ROW 3---------------- */}
                     {/* -------------------ROW 4---------------- */}
                     <div className="row" id="row4">
                         <div className="column" id="row4L">
-                            <Link to="/populate/design"><h2>design</h2></Link>
+                            <Link to="/populate/design"><h2 className="topicName">design</h2></Link>
                         </div>
 
                         <div className="column" id="row4R">
-                            <Link to="/populate/anime_gaming"><h2>anime & games</h2></Link>
+                            <Link to="/populate/environment"><h2 className="topicName">environment</h2></Link>
                         </div>
                     </div>
                     {/* -------------------ROW 4---------------- */}
                     {/* -------------------ROW 5---------------- */}
                     <div className="row" id="row5">
                         <div className="column" id="row5L">
-                            <Link to="/populate/environment"><h2>environment</h2></Link>
+                        <Link to="/populate/charities"><h2 className="topicName">charities</h2></Link>
                         </div>
 
-                        <div className="column" id="row5R">
+                        {/* <div className="column" id="row5R">
                             <Link to="/populate/charities"><h2>charities</h2></Link>
-                        </div>
+                        </div> */}
                     </div>
                     {/* -------------------ROW 5---------------- */}
                 </div>

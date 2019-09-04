@@ -34,12 +34,7 @@ class SignUp extends React.Component {
         return (
         
         <div id="loginBackground">
-            {/* <div style={{backgroundImage: ${titleImage} }} ></div> */}
-            {/* <div id="imageBackround"> */}
-                <img className="responsive" id="loginBPicture" src={titleImage} alt="" /> 
-            {/* </div> */}
             <div className="front" id="containerLogin">
-            {/* <img class="responsive" id="loginBPicture" src={titleImage} alt="" /> */}
                 <h1>Sign Up!</h1>
                 <form onSubmit={this.handleSubmit}>
                     <input id="input" type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} placeholder="name" /><br />
