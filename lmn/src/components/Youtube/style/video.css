@@ -15,7 +15,7 @@
     border-radius: 15px;
 }
 
-#embeded {
+#embed {
     width: 29vh;
     height: 26.6vh;
     margin-left: ;
@@ -32,4 +32,8 @@
     width: 30vh;
     margin-left: 6vh;
     font-weight: smaller;
+}
+
+#loading-div {
+    color: white;
 }

@@ -3,25 +3,24 @@ nav.navbar.navbar-default {
 }
 
 .navbar {
-  background-color: black;
   font-family: monospace;
-
-  
 }
 
+
 /* -------------doesnt work */
- Link:link {
+Link:link {
   color: white;
 }
 
- Link:visited {
+Link:visited {
   color: grey;
 }
 
- Link:hover {
+Link:hover {
   color: grey;
 }
- Link:active {
+
+Link:active {
   color: grey;
 }
 /* -------------doesnt work */

@@ -12,7 +12,7 @@ import axios from 'axios';
 require("dotenv").config();
 
 
-const KEY = process.env.REACT_APP_YOUTUBE_KEY
+const KEY = "AIzaSyAFUNYmE1gfydRFrlb3Q05gXlPSgQmiY6I"
 class Populate extends Component {
 
     state = {
@@ -49,9 +49,9 @@ class Populate extends Component {
 
     }
 
-    componentDidUpdate(){
+    componentDidUpdate(prevProps, prevState){
         
-        if(this.state.articles.length <= 0){
+        if(this.state.articles.length === 0){
             this.fetchArticles();
         }
     }
@@ -71,7 +71,8 @@ class Populate extends Component {
 
     searchListenAPI = () => {
         API.searchPodcast(this.state.category)
-        .then(res => this.setState({
+        .then(res => 
+        this.setState({
             podcasts: res.data.results
         })
         )
@@ -83,7 +84,6 @@ class Populate extends Component {
         return (
             <div id="containerOfpopulatedPage" className="container">
                 {/* <h1 id="titleDiscover">Discover</h1> */}
-            
 
                 {/* -------------------YOUTUBE---------------- */}
                 {/* <div id="containerPopulated"> */}
@@ -100,8 +100,6 @@ class Populate extends Component {
                             </div>
                         </div>
                     </div>
-
-                    
                     <br/>
                     <br/>
                     <br/>
@@ -134,7 +132,7 @@ class Populate extends Component {
                     <div id="podcast">
                     {this.state.podcasts.map(podcastsObj => (
                         <PodcastContainer
-                            key={podcastsObj.podcast_id}
+                            key={podcastsObj.id}
                             audio={podcastsObj.audio}
                             image={podcastsObj.image}
                             title={podcastsObj.title_original}

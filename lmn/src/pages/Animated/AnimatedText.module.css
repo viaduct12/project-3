@@ -10,8 +10,7 @@
 .animatedTextContent {
   color: #000000;
   font-size: 60px;
-  font-weight: 200px;
-  text-align: left;
+  font-weight: 200;
   font-family: monospace;
   line-height: 1.1;
   letter-spacing: 5px;

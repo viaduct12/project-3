@@ -13,9 +13,9 @@ export default function PostContainer(props) {
       <Link to={`/singleDiscussion/${props.category}/${props.id}`}>
         <h5>{props.topic}</h5>
         </Link>
-        <h6><i class="material-icons">person_outline</i> {props.username}</h6>
+        <h6><i className="material-icons">person_outline</i> {props.username}</h6>
         <p>{props.description}</p>
-        <p><i class="material-icons">access_time</i> {props.createdAt}</p>
+        <p><i className="material-icons">access_time</i> {props.createdAt}</p>
         <div className="divider"></div>
       </div>
       

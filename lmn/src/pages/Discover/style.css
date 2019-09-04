@@ -1,3 +1,7 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+}
 
 #leftBlock {
     border-radius: 40px;
@@ -8,23 +12,29 @@
     height: 200%;
     width: 30%;
     opacity: 0.9;
-    margin-top: 5%;
+    margin-top: 25px;
     margin-left: 10%;
     
     /* display: inline-block; */
 }
 
-#Uinfo {
+#userInfoBlock {
     border-radius: 25px;
-    background-color: lightslategray;
+    /* background-color: lightslategray; */
     opacity: 0.8;
-    color: white;
+    color: whitesmoke;
     font-family: monospace;
+    font-size: 18px;
     height: 70%;
 }
 
 h1, h2 {
     color: white;
+}
+
+h2 {
+    text-align: center;
+    padding: 5px;
 }
 
 #titleFav {
@@ -37,14 +47,12 @@ h1, h2 {
     display: inline-block;
     text-align: center;
     margin-top: 5%;
-    margin-left: 0%;
+    /* margin-left: 0%; */
     height: 100%;
     width: 59%;
-    /* margin-top: -20%; */
+    margin-top: 25px;
     /* z-index:999; */
-    position: fixed;
-
-
+    position: absolute;
 }
 
 .column {
@@ -59,17 +67,19 @@ h1, h2 {
     clear: both;
 }
 
-
+.col {
+    color: white;
+}
 
 
 #row1L {
     border-radius: 20px;
-    background-color:#6CDAE7;
+    background-color:rgb(55, 165, 177);
     flex: 0 0 65%;
     height: 40%;
-    width: 30%;
+    width: 35%;
     /* margin: 2 5px; */
-    margin: 4%;
+    margin: 15px;
     float: left;
 }
 
@@ -78,20 +88,20 @@ h1, h2 {
     background-color: #cc00cc ;
     flex: 0 0 65%;
     height: 40%;
-    width: 30%;
+    width: 35%;
     /* margin: 2 5px; */
-    margin: 4%;
+    margin: 15px;
     float: left;
 }
 
 #row3L {
     border-radius: 20px;
-    background-color: greenyellow;
+    background-color: rgb(121, 180, 33);
     flex: 0 0 65%;
     height: 40%;
-    width: 30%;
+    width: 35%;
     /* margin: 2 5px; */
-    margin: 4%;
+    margin: 10px;
     float: left;
 }
 
@@ -102,7 +112,7 @@ h1, h2 {
     height: 40%;
     width: 30%;
     /* margin: 2 5px; */
-    margin: 4%;
+    margin: 15px;
     float: left;
 }
 
@@ -111,20 +121,20 @@ h1, h2 {
     background-color: violet ;
     flex: 0 0 65%;
     height: 40%;
-    width: 30%;
+    width: 35%;
     /* margin: 2 5px; */
-    margin: 4%;
+    margin: 15px;
     float: left;
 }
 
 #row1R {
     border-radius: 20px;
-    background-color: #FC74FD;
+    background-color: rgb(145, 18, 107);
     flex: 1;
     height: 40%;
-    margin: 4%;
+    margin: 15px;
     float: left;
-    width: 30%;
+    width: 35%;
 }
 
 #row2R {
@@ -132,9 +142,9 @@ h1, h2 {
     background-color: blueviolet;
     flex: 1;
     height: 40%;
-    margin: 4%;
+    margin: 15px;
     float: left;
-    width: 30%;
+    width: 35%;
 }
 
 #row3R {
@@ -142,9 +152,9 @@ h1, h2 {
     background-color: orange;
     flex: 1;
     height: 40%;
-    margin: 4%;
+    margin: 15px;
     float: left;
-    width: 30%;
+    width: 35%;
 }
 
 #row4R {
@@ -152,9 +162,9 @@ h1, h2 {
     background-color: #cc00cc;
     flex: 1;
     height: 40%;
-    margin: 4%;
+    margin: 15px;
     float: left;
-    width: 30%;
+    width: 35%;
 }
 
 #row5R {
@@ -162,9 +172,9 @@ h1, h2 {
     background-color: lightskyblue;
     flex: 1;
     height: 40%;
-    margin: 4%;
+    margin: 15px;
     float: left;
-    width: 30%;
+    width: 35%;
 }
 
 
