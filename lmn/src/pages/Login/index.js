@@ -1,6 +1,6 @@
 import React from "react";
-import './style.css';
-import titleImage from '../Title/image/titleImage.png';
+import './loginStyle.css';
+// import titleImage from '../Title/image/titleImage.png';
 import API from "../../utils/API";
 import Auth from "../../utils/Auth";
 
