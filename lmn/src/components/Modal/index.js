@@ -2,15 +2,16 @@ import React, { Component } from "react";
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
 import './style.css';
-import Input from '../Input';  
-import TextArea from '../TextArea'; 
+import Input from '../Input';
+import TextArea from '../TextArea';
 import PostButton from '../PostButton';
 import DiscardButton from '../DiscardButton';
 import Options from '../Options';
 import API from "../../utils/API";
+// import PostContainer from "../PostContainer"
 
 class Modal extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -61,13 +62,15 @@ class Modal extends Component {
     // instance.destroy();
   }
 
-handleInput(e) {
-      let value = e.target.value;
-      let name = e.target.name;
-  this.setState( prevState => ({ newPost : 
-        {...prevState.newPost, [name]: value
-        }
-      }), () => console.log(this.state.newPost))
+  handleInput(e) {
+    let value = e.target.value;
+    let name = e.target.name;
+    this.setState(prevState => ({
+      newPost:
+      {
+        ...prevState.newPost, [name]: value
+      }
+    }), () => console.log(this.state.newPost))
   }
 
   handleTextArea(e) {
@@ -77,16 +80,13 @@ handleInput(e) {
       newPost: {
         ...prevState.newPost, description: value
       }
-      }), ()=>console.log(this.state.newPost))
+    }), () => console.log(this.state.newPost))
   }
 
 
-handleOption(e) {
-  e.preventDefault();
-
-
-
-}
+  handleOption(e) {
+    e.preventDefault();
+  }
 
   handleFormSubmit(e) {
     e.preventDefault();
@@ -94,14 +94,17 @@ handleOption(e) {
     console.log(postData)
     API.createPost(postData)
       .then(response => {
-          console.log("Successful" + response);
-        })
-  } 
+        console.log("Successful" + response);
+        let difference = "successful";
+        this.props.modalUpdate(difference);
+        this.handleClearForm(e);
+      })
+  }
 
   handleClearForm(e) {
-  
+
     e.preventDefault();
-    this.setState({ 
+    this.setState({
       newPost: {
         username: '',
         title: '',
@@ -109,7 +112,7 @@ handleOption(e) {
         category: []
       },
     })
-}
+  }
 
 
   render() {
@@ -135,36 +138,36 @@ handleOption(e) {
             <h4>New Topic</h4>
             {/* Name of the user */}
             <Input inputType={'text'}
-            title= {'Username'} 
-            name= {'username'}
-            value={this.state.newPost.username} 
-            placeholder = {'Enter your name'}
-            handleChange = {this.handleInput}/> 
-              {/* Name of the topic */}
+              title={'Username'}
+              name={'username'}
+              value={this.state.newPost.username}
+              placeholder={'Enter your name'}
+              handleChange={this.handleInput} />
+            {/* Name of the topic */}
             <Input inputType={'text'}
-                  title= {'Topic'} 
-                  name= {'title'}
-                  value={this.state.newPost.title} 
-                  placeholder = {'Enter your topic'}
-                  handleChange = {this.handleInput}/> 
-          {/* Category Options */}
-            <Options action={this.handleOption}/>
-          {/* Discussion*/}
-          <TextArea
-            title={'What would you like to discuss?'}
-            rows={10}
-            value={this.state.newPost.text}
-            name={'Discussion'}
-            handleChange={this.handleTextArea}
-            placeholder={'type away!'} />
+              title={'Topic'}
+              name={'title'}
+              value={this.state.newPost.title}
+              placeholder={'Enter your topic'}
+              handleChange={this.handleInput} />
+            {/* Category Options */}
+            <Options action={this.handleOption} />
+            {/* Discussion*/}
+            <TextArea
+              title={'What would you like to discuss?'}
+              rows={10}
+              value={this.state.newPost.text}
+              name={'Discussion'}
+              handleChange={this.handleTextArea}
+              placeholder={'type away!'} />
 
-          <div className="modal-footer">
-            <PostButton action={this.handleFormSubmit}/>
-            {/* <button action={this.handleSubmitForm} type={'primary'} title={'submit'} className="modal-close waves-effect waves-green btn-flat">
+            <div className="modal-footer">
+              <PostButton action={this.handleFormSubmit} />
+              {/* <button action={this.handleSubmitForm} type={'primary'} title={'submit'} className="modal-close waves-effect waves-green btn-flat">
               Post
             </button> */}
-              <DiscardButton action={this.handleClearForm}/>
-            {/* <button action={this.handleClearForm} type={'secondary'} title={'clear'}  className="modal-close waves-effect waves-red btn-flat">
+              <DiscardButton action={this.handleClearForm} />
+              {/* <button action={this.handleClearForm} type={'secondary'} title={'clear'}  className="modal-close waves-effect waves-red btn-flat">
               Discard</button> */}
             </div>
           </div>
