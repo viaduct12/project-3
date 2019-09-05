@@ -20,9 +20,9 @@ class Modal extends Component {
         title: '',
         description: '',
         category: this.props.category
-      },
+      }
 
-      categoryOptions: ['Anime & Gaming', 'Charities', 'Design', 'Environment', 'Media', 'Movements', 'Politics', 'Podcasts', 'Sports', 'Technology']
+      // categoryOptions: ['Anime & Gaming', 'Charities', 'Design', 'Environment', 'Media', 'Movements', 'Politics', 'Podcasts', 'Sports', 'Technology']
     }
 
     this.handleTextArea = this.handleTextArea.bind(this);
@@ -62,6 +62,18 @@ class Modal extends Component {
     // instance.destroy();
   }
 
+  componentDidUpdate = () => {
+
+    if(this.props.category !== this.state.newPost.category){
+      console.log(this.props.category !== this.state.newPost.category)
+      let updatedCategory = this.props.category;
+      this.setState( prevState => ({
+        newPost: {
+          ...prevState.newPost, category: updatedCategory
+        }
+      }))
+    }
+  }
   handleInput(e) {
     let value = e.target.value;
     let name = e.target.name;
@@ -109,7 +121,7 @@ class Modal extends Component {
         username: '',
         title: '',
         description: '',
-        category: []
+        category: ''
       },
     })
   }
@@ -151,12 +163,12 @@ class Modal extends Component {
               placeholder={'Enter your topic'}
               handleChange={this.handleInput} />
             {/* Category Options */}
-            <Options action={this.handleOption} />
+            {/* <Options action={this.handleOption} /> */}
             {/* Discussion*/}
             <TextArea
               title={'What would you like to discuss?'}
               rows={10}
-              value={this.state.newPost.text}
+              value={this.state.newPost.description}
               name={'Discussion'}
               handleChange={this.handleTextArea}
               placeholder={'type away!'} />

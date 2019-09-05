@@ -71,7 +71,7 @@ class Category extends Component {
                 <h2>{this.state.category} forum</h2>
                 {/* This div is 12-columns wide on all screen sizes */}
                 {/* <a className="waves-effect waves-light btn right" id="new-topic-btn">Create a new topic</a> */}
-                <Modal category={this.state.category} path={this.props.location.pathname} history={this.props.history} modalUpdate={this.modalUpdate}/>
+                <Modal category={this.state.category} path={this.props.location.pathname} modalUpdate={this.modalUpdate}/>
               </div>
             </div>
           </div>
