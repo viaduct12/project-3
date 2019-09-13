@@ -90,7 +90,7 @@ class Populate extends Component {
                 <div id="containerYoutube">
                     <h1>youtube</h1>
                     <Searchbar handleFormSubmit={this.handleSubmit}/>
-                    <div className='ui grid'>
+                    <div className='uiGrid'>
                         <div className="ui row">
                             <div className="eleven wide column">
                                 <VideoDetail video={this.state.selectedVideo}/>
@@ -109,7 +109,7 @@ class Populate extends Component {
 
                 {/* -------------------NEWS---------------- */}
                 <div id="containerNews">
-                    <h1>news</h1>
+                    <h1 id="newsTitle">news</h1>
                     <div id="news">
                         {this.state.articles.map(articlesObj => (
                         <ArticleContainer
