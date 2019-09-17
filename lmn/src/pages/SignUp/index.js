@@ -25,7 +25,7 @@ class SignUp extends React.Component {
         // alert('here is value ' + this.state.value);
         API.createUser(this.state).then(res => {
             Auth.setToken(res.data.token);
-            this.props.history.push({ pathname: '/discover', state: { username: res.data.username } });
+            this.props.history.push({ pathname: '/login' });
         }).catch(err => console.log(err));
 
     }
