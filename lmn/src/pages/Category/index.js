@@ -8,13 +8,15 @@ import Categories from '../../components/Categories';
 import PostContainer from "../../components/PostContainer";
 
 import API from "../../utils/API";
+// import { DiffieHellman } from 'crypto';
 
 
 class Category extends Component {
 
   state = {
     category: this.props.match.params.category,
-    posts: []
+    posts: [],
+    modalChanged: ''
   }
 
   componentDidMount() {
@@ -43,6 +45,21 @@ class Category extends Component {
     }
   }
 
+  checkModal = () => {
+    if(this.state.modalChanged === true){
+      this.fetchPosts();
+      this.changeCategory();
+      this.setState({ modalChanged : false });
+    }
+  }
+
+  modalUpdate = difference => {
+    // (difference === "successful" ? this.setState({ modalChanged: true }) : this.setState({ modalChanged: false }))
+    if (difference === "successful"){
+      this.setState({modalChanged : true});
+      this.checkModal();
+    }
+  }
   render() {
     return (
       <div className="container">
@@ -54,7 +71,7 @@ class Category extends Component {
                 <h2>{this.state.category} forum</h2>
                 {/* This div is 12-columns wide on all screen sizes */}
                 {/* <a className="waves-effect waves-light btn right" id="new-topic-btn">Create a new topic</a> */}
-                <Modal category={this.state.category} />
+                <Modal category={this.state.category} path={this.props.location.pathname} modalUpdate={this.modalUpdate}/>
               </div>
             </div>
           </div>
