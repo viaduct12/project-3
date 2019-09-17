@@ -17,6 +17,10 @@
     margin-top: 65%;
 }
 
+#youtubeTitle {
+    
+    margin-left: 20%;
+}
 
 #news {
     
@@ -89,9 +93,9 @@ body {
 }
 
 #newsTitle {
-    text-align: center;
+    margin-left:20%;
     margin-top:6%;
-    margin-bottom: 7%;
+    margin-bottom: 4%;
 
 }
 
