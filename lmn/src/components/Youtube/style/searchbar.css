@@ -1,13 +1,29 @@
 .field {
-padding: 5px;
+/* padding: 5px; */
+  margin-left: -5%;
+  border-radius: 20px;
+
 }
 
 #video-search {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 10px;
+  margin-top: -7%;
+  margin-left: -2%;
 }
 
+#searchBox {
+  border-radius: 20px;
+  width: 125%;
+}
+#videoSearchContainer {
+  width: 100vw;
+  border-radius: 20px;
+
+}
 #video-input {
-  margin: 10px;
+  margin-top:-3%;
+  margin-left: 0%;
   width: 85%;
+  height:5px;
+  border-radius: 20px;
 }
