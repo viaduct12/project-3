@@ -88,7 +88,7 @@ class Populate extends Component {
                 {/* -------------------YOUTUBE---------------- */}
                 {/* <div id="containerPopulated"> */}
                 <div id="containerYoutube">
-                    <h1>youtube</h1>
+                    <h1 id="youtubeTitle">youtube</h1>
                     <Searchbar handleFormSubmit={this.handleSubmit}/>
                     <div className='uiGrid'>
                         <div className="ui row">
