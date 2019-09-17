@@ -12,7 +12,7 @@ import axios from 'axios';
 require("dotenv").config();
 
 
-const KEY = "AIzaSyAFUNYmE1gfydRFrlb3Q05gXlPSgQmiY6I"
+// const KEY = "AIzaSyAFUNYmE1gfydRFrlb3Q05gXlPSgQmiY6I"
 class Populate extends Component {
 
     state = {
@@ -29,7 +29,7 @@ class Populate extends Component {
             {params: {
                 part: 'snippet',
                 maxResults: 5,
-                key: KEY,
+                key: process.env.REACT_APP_YOUTUBE_API,
                 q:termFromSearchbar
             }
         })

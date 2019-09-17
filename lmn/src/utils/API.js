@@ -14,12 +14,12 @@ const headers = () => {
 }
 export default {
   scrapeArticles: function(query) {
-    return axios.get("https://lmn-news-api.herokuapp.com/api/article/scrape/" + query);
-    // return axios.get("http://localhost:3000/api/article/scrape/" + query);
+    // return axios.get("https://lmn-news-api.herokuapp.com/api/article/scrape/" + query);
+    return axios.get("http://localhost:3000/api/article/scrape/" + query);
   },
   getArticles: function(query) {
-    return axios.get("https://lmn-news-api.herokuapp.com/api/article/get/" + query)
-    // return axios.get("http://localhost:3000/api/article/get/" + query);
+    // return axios.get("https://lmn-news-api.herokuapp.com/api/article/get/" + query)
+    return axios.get("http://localhost:3000/api/article/get/" + query);
   },
 
   searchPodcast: function(query) {
