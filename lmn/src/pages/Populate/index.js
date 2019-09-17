@@ -4,7 +4,7 @@ import ArticleContainer from "../../components/ArticleContainer";
 import PodcastContainer from "../../components/PodcastContainer";
 // import Wrapper from "../../components/Wrapper";
 import './style.css';
-import Searchbar from '../../components/Youtube/Searchbar';
+import Searchbar from '../../components/Youtube/SearchBar';
 // import youtube from "../../components/Youtube/youtube";
 import VideoList from '../../components/Youtube/VideoList';
 import VideoDetail from '../../components/Youtube/VideoDetail';
@@ -95,7 +95,7 @@ class Populate extends Component {
                             <div className="eleven wide column">
                                 <VideoDetail video={this.state.selectedVideo}/>
                             </div>
-                            <div className="five wide column">
+                            <div id="videoListContainer" className="five wide column">
                                 <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
                             </div>
                         </div>
@@ -128,7 +128,7 @@ class Populate extends Component {
 
                 {/* -------------------PODCAST---------------- */}
                 <div id="containerPodcast">
-                    <h1>podcast</h1>
+                    <h1 id="podcastTitle">podcast</h1>
                     <div id="podcast">
                     {this.state.podcasts.map(podcastsObj => (
                         <PodcastContainer
