@@ -13,6 +13,11 @@
     font-size: 30%;
 } */
 
+#videoListContainer {
+    margin-top: 65%;
+}
+
+
 #news {
     
     overflow-y:scroll;
@@ -63,18 +68,17 @@ body {
 }
 .uiGrid {
     background-color: white;
-    width: 120%;
+    width: 125%;
+    border-radius: 20px;
+
 }
 
-#videoList {
-    margin-right: -5%
-}
 
 
 #containerNews {
     border-radius: 20px;
     /* background-color:#6CDAE7; */
-    margin-top: 10%;
+    margin-top: 8%;
     /* margin-right: 10%; */
     width: 100%;
     height: auto;
@@ -85,7 +89,15 @@ body {
 }
 
 #newsTitle {
-    margin-right: 20%
+    text-align: center;
+    margin-top:6%;
+    margin-bottom: 7%;
+
+}
+
+#podcastTitle {
+    margin-top:2%;
+    margin-bottom:5%;
 }
 
 #containerPodcast {
@@ -94,7 +106,7 @@ body {
     /* background-color: #FC74FD; */
     /* margin-top: 40%; */
     margin: 40px;
-    margin-top: 8%;
+    margin-top: 9%;
     width: 100%;
     height: auto;
     /* flex: 1;
