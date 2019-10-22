@@ -37,15 +37,15 @@ export default {
   },
   createUser: function(userInfo){
     // console.log(userInfo, "inside api request");
-    // return axios.post("https://lmn-news-api.herokuapp.com/api/auth/signup", userInfo);
+    return axios.post("https://lmn-news-api.herokuapp.com/api/auth/signup", userInfo);
 
     //test link
-    return axios.post("http://localhost:3000/api/auth/signup", userInfo);
+    // return axios.post("http://localhost:3000/api/auth/signup", userInfo);
   },
   loginUser: function(userCredentials) {
     // console.log(userCredentials, "inside log in request");
-    // return axios.post("https://lmn-news-api.herokuapp.com/api/auth/login", userCredentials);
-    return axios.post("http://localhost:3000/api/auth/login", userCredentials);
+    return axios.post("https://lmn-news-api.herokuapp.com/api/auth/login", userCredentials);
+    // return axios.post("http://localhost:3000/api/auth/login", userCredentials);
   },
   // probably unnecessary
   forumCategory: function(query) {
@@ -54,24 +54,24 @@ export default {
 
   createPost: function(postObj,){
     // console.log("create", postObj);
-    // return axios.post("https://lmn-news-api.herokuapp.com/api/post/create", postObj);
-    return axios.post('http://localhost:3000/api/post/create', postObj)
+    return axios.post("https://lmn-news-api.herokuapp.com/api/post/create", postObj);
+    // return axios.post('http://localhost:3000/api/post/create', postObj)
   },
 
   //gets all post of said category
   getPost: function(postCategory){
-    // return axios.get("https://lmn-news-api.herokuapp.com/api/post/get/" + postCategory);
-    return axios.get("http://localhost:3000/api/post/get/" + postCategory);
+    return axios.get("https://lmn-news-api.herokuapp.com/api/post/get/" + postCategory);
+    // return axios.get("http://localhost:3000/api/post/get/" + postCategory);
   },
 
   getOnePost: function(postCategory, postId) {
-    // return axios.get("https://lmn-news-api.herokuapp.com/api/post/get/" + postCategory + "/" + postId);
-    return axios.get("http://localhost:3000/api/post/get/" + postCategory +"/"+ postId);
+    return axios.get("https://lmn-news-api.herokuapp.com/api/post/get/" + postCategory + "/" + postId);
+    // return axios.get("http://localhost:3000/api/post/get/" + postCategory +"/"+ postId);
   },
 
   getRecentPost: function(){
-    // return axios.get("https://lmn-news-api.herokuapp.com/api/post/recent");
-    return axios.get("http://localhost:3000/api/post/recent");
+    return axios.get("https://lmn-news-api.herokuapp.com/api/post/recent");
+    // return axios.get("http://localhost:3000/api/post/recent");
   }
 }
 

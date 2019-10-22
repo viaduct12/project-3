@@ -32,7 +32,7 @@ class Discover extends Component {
                         <div id="leftBlock">
 
                             <div className="leftContainer">
-                            <h1 className="hello">Hello {this.state.username} </h1>
+                            <h1 className="hello">Hello {this.state.username}!</h1>
                             <br />
                             <div id="userInfoBlock">
                                 <p className="blurbBlock">Our mission is to provide a
