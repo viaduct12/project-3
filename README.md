@@ -21,6 +21,9 @@ Our mission is to provide a wide range of news outlets and give you topics to di
 ## Backend Server 
 - [LMN-API](https://lmn-news-api.herokuapp.com/api/article/all)
 
+## Deployed Link
+- [LMN-News](https://viaduct12.github.io/project-3/)
+
 ### Authors 
 - [Lawrence](https://github.com/viaduct12)
 - [Meghan](https://github.com/meghanmullally)
