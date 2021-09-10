@@ -11,8 +11,6 @@ import VideoDetail from '../../components/Youtube/VideoDetail';
 import axios from 'axios';
 require("dotenv").config();
 
-
-// const KEY = "AIzaSyAFUNYmE1gfydRFrlb3Q05gXlPSgQmiY6I"
 class Populate extends Component {
 
     state = {
@@ -24,7 +22,7 @@ class Populate extends Component {
     };
 
     handleSubmit = async (termFromSearchbar) => {
-        console.log('inside handleFormSubmit')
+        // console.log('inside handleFormSubmit')
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search/',
             {params: {
                 part: 'snippet',
@@ -39,13 +37,28 @@ class Populate extends Component {
     };
     
     handleVideoSelect = (video) => {
+        // console.log('i have been clicked')
         this.setState({selectedVideo: video})
+    }
+
+    loadVideo = async () => {
+        const response = await axios.get('https://www.googleapis.com/youtube/v3/search/',
+            {
+                params: {
+                    part: 'snippet',
+                    maxResults: 5,
+                    key: process.env.REACT_APP_YOUTUBE_API,
+                    q: this.state.category
+                }
+            })
+        this.setState({selectedVideo: response.data.items[0]})
     }
 
     componentDidMount() {
         this.searchListenAPI();
         this.loadArticles();
         this.fetchArticles();
+        this.loadVideo();
 
     }
 
@@ -111,7 +124,7 @@ class Populate extends Component {
                 <div id="containerNews">
                     <h1 id="newsTitle">news</h1>
                     <div id="news">
-                        {this.state.articles.map(articlesObj => (
+                        {this.state.articles.reverse().map(articlesObj => (
                         <ArticleContainer
                             key={articlesObj.id}
                             title={articlesObj.title}
